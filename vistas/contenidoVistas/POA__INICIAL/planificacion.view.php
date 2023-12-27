@@ -4,6 +4,8 @@
 
 <?php $anioActual = date('Y');?>
 
+<?php $componentesTablas = new componentesTablas(); ?>
+
 <?php session_start();?>
 <?php $aniosPeriodos__ingesos=$_SESSION["selectorAniosA"];?>
 
@@ -164,7 +166,9 @@
 
 	<?=$componentes->getModalMatricez("modalMatriz".$informacionSeleccionada[$clave]['idActividades'],"formMatriz".$informacionSeleccionada[$clave]['idActividades'],$informacionSeleccionada[$clave]['idActividades'].".-".$informacionSeleccionada[$clave]['nombreActividades'],"tablaHead".$informacionSeleccionada[$clave]['idActividades'],"cuerpoMatriz".$informacionSeleccionada[$clave]['idActividades']);?>
 
-	
+	<?= $componentesTablas->getModalVacioXl("subirArchivoExcelPOA", "formPreviewBancos", "idTituloModalContratacion", "divcontratcionActividades", "cerrarBtnContratacionPublicaAdministracion", "inputIdItem"); ?>
+
+
 
 
 	
