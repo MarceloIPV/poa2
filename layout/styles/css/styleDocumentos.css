@@ -1,0 +1,193 @@
+
+/*documentos*/
+.container-input {
+    text-align: center;
+    border-radius: 6px;
+    width: 50%;
+}
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile + label {
+    max-width: 80%;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.625rem 1.25rem;
+}
+
+.inputfile + label svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-top: -0.25em;
+    margin-right: 0.25em;
+}
+
+.iborrainputfile {
+	font-size:10px; 
+	font-weight:normal;
+	font-family: 'Lato';
+}
+
+
+/* style 5 */
+
+.inputfile-5 + label {
+    color: #0277bd;
+}
+
+.inputfile-5:focus + label,
+.inputfile-5.has-focus + label,
+.inputfile-5 + label:hover {
+    color: #0277bd;
+}
+
+.inputfile-5 + label figure {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #0277bd;
+    display: block;
+    margin: 0 auto 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.inputfile-5:focus + label figure,
+.inputfile-5.has-focus + label figure,
+.inputfile-5 + label:hover figure {
+    background-color: #0277bd;
+}
+
+.inputfile-5 + label svg {
+    width: 60%;
+    height: 60%;
+    fill: #fff;
+    position: relative;
+    top: 0.7em;
+    left: 0.1em;
+}
+/*end estyle5*/
+
+/*end documentos*/
+
+/*datapicker*/
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button, html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
+    border: 1px solid #fff;
+    background: #fff;
+    font-weight: normal;
+    color: #454545;
+}
+select.ui-datepicker-month ,select.ui-datepicker-year{
+  min-height: 38px;
+  padding: 6px 8px;
+  line-height: 1.42857143;
+  
+  color: #555;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 18px;
+}
+//-------------
+.ui-draggable-handle {      
+    -ms-touch-action: none;     
+    touch-action: none;     
+}
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year {
+  width: 50%;
+  font-size: 16px; }
+.ui-datepicker .ui-datepicker-title select {    
+    font-size: 14px;
+  margin: 1px 0;
+}       
+.ui-datepicker select.ui-datepicker-month,      
+.ui-datepicker select.ui-datepicker-year {
+  font-family: Helvetica, "Microsoft JhengHei", sans-serif; 
+    width: 50%;     
+}
+html .ui-button.ui-state-disabled:hover,    
+html .ui-button.ui-state-disabled:active {
+    border: 1px solid #fff;         
+    background: #fff;       
+    font-weight: normal;        
+    color: #454545; 
+}
+
+.ui-state-active,       .ui-state-active,
+.ui-widget-content .ui-state-active,    
+.ui-widget-header .ui-state-active,     
+a.ui-button:active,
+.ui-button:active,  
+.ui-button.ui-state-active:hover {  
+    border: 1px solid #555;     
+    background: #555;           
+    font-weight: normal;    
+    color: #ffffff;     
+}       
+.ui-icon-background,    
+.ui-state-active .ui-icon-background {      
+    border: #005792;        
+    background-color: #ffffff;          
+}
+.ui-state-highlight,        
+.ui-widget-content .ui-state-highlight,     
+.ui-widget-header .ui-state-highlight {     
+    border: 1px solid #f7ee91;      
+    background: #f7ee91;    
+    color: #444;    
+}       
+.ui-state-checked { 
+    border: 1px solid #f7ee91;      
+    background: #f7ee91;            
+}       
+.ui-state-highlight a,  
+.ui-widget-content .ui-state-highlight a,   
+.ui-widget-header .ui-state-highlight a {       
+    color: #444;    
+}
+
+.ui-widget-header .ui-icon:before{
+    content: ">";       
+}
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+    position: absolute;
+    top: 0.5em;
+    width: 1.8em;
+    height: 1.8em;
+}
+
+.ui-datepicker-title{
+    display: flex;
+    justify-content: center;
+}
+
+.ui-datepicker .ui-datepicker-title {
+    margin: 0;
+    line-height: 1.8em;
+    text-align: center;
+}
+
+.ui-datepicker-title{
+    width: 80%;
+    position: relative;
+    left: 10%;
+}

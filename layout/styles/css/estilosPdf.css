@@ -1,0 +1,247 @@
+html{
+	margin:80px 50px;
+}
+
+body{
+	font-size: 12px!important;
+}
+
+.margen__borde{
+	font-family: Calibri;
+	font-size: 11px;
+}
+
+.separacion__tablas tr td{
+	font-family: Calibri;
+	font-size: 11px;
+	padding:.3em;
+}
+
+.tabla__bordada{
+	width: 100%;
+	padding-right: 1em;
+	padding-left:1em;
+	padding-bottom:1em;
+	padding-top:5em;
+}
+
+.tabla__bordadaTresCD{
+	width: 100%;
+	padding-right: 1em;
+	padding-left:1em;
+	position: relative;
+	top: .5em;
+}
+
+.tabla__bordadaTresCDE{
+	width: 100%;
+	padding-right: 1em;
+	padding-left:1em;
+	position: relative;
+	top: 1.5em;	
+}
+
+.tabla__bordadaTresC{
+	width: 100%;
+	padding-right: 1em;
+	padding-left:1em;
+	position: relative;
+	top: -1em;
+}
+
+.tabla__bordada__2{
+	width: 100%;
+	padding-right: 1em;
+	padding-left:1em;
+	padding-bottom:1em;
+}
+
+.tabla__bordada__3 tr{
+	width: 100%;
+	padding-right: 1em;
+	padding-left:1em;
+	padding-bottom:1em;
+}
+
+.justify__class{
+	text-align: justify;
+}
+
+.separacion__tablas{
+	margin-top: .5em;
+}
+
+.tabla__bordada__2 tr{
+	padding:.5em;
+}
+
+.tabla__bordada__3 tr{
+	padding:.1em;
+}
+
+.fila__uno{
+	padding-top: .5em!important;
+}
+
+.enfacis__letras{
+	font-weight:bold;
+}
+
+.enfacis__letrasOblic{
+	font-style: oblique;
+}
+
+
+
+.tabla__nombre__portada{
+	margin-top: 15em;
+}
+
+.contenedor___nombre__proyecto{
+	font-weight: bold;
+	width:100%;
+	font-size: 14px;
+}
+
+.contenedor___nombre__proyecto__portada{
+	font-family: "Times New Roman";
+	font-size: 30px;
+	color:#1e88e5;
+}
+
+.nombre__apartados__principales{
+	font-family: Calibri;
+	font-size: 13px;
+	font-weight:bold;
+	font-style:oblique;
+	padding-bottom:.5em;
+	border-bottom:1px solid black;
+}
+
+.nombre__apartados__secundarios{
+	font-family: Calibri;
+	font-size: 13px;
+	font-weight:bold;
+	padding-bottom:.5em;
+	padding-top:1em;
+}
+
+.ancho__referencias{
+	width: 10%;
+	font-weight: bold;
+}
+
+.ancho__referencias__4{
+	font-weight: none!important;
+	width:3000px!important;
+}
+
+.ancho__referencias__2{
+	width: 120px;
+	font-weight: bold;	
+}
+
+.ancho__referencias__3{
+	width: 78px;
+	font-weight: bold;	
+}
+
+.ancho__referencias__4{
+	font-weight:bold;
+	width: 10%;
+}
+
+.ancho__referencias__5{
+	font-weight:bold;
+	width: 20%;
+}
+
+.tabla__top{
+	position: relative;
+	top: -1em;
+}
+
+.tabla__top__2{
+	position: relative;
+	top: -1.5em;
+}
+
+.ancho__filas__necesarias{
+	width:90%;
+}
+
+.tablas__bordes__necesarias{
+	border-collapse: collapse;
+}
+
+.tablas__bordes__necesarias tr th{
+	border:1px solid black;
+	padding:.5em;
+}
+
+.tablas__bordes__necesarias tr td{
+	border:1px solid black;
+	padding:.5em;
+}
+
+.letra__capital__x{
+	font-weight:bold;
+}
+
+.salto__de__pagina{
+	page-break-after: always;
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+.fila__numerales{
+	width:5%;
+}
+
+.columna__enfatizada__aportes{
+	font-weight:bold;
+	width: 60%;
+}
+
+.padding__celdas{
+	padding:.5em;
+}
+
+.enfacis__celdas{
+	font-weight:bold;
+}
+
+
+.padding__celdas__dos{
+	padding: 2em;
+}
+
+.alto__fila{
+	height:100px;
+}
+
+
+#header{ 
+ position: fixed; 
+ left: 0px; 
+ top: -91px; 
+ right: 0px; 
+ height: 10px;
+ text-align: center; 
+}
+
+#footer{ 
+ position: fixed; 
+ bottom: -15px; 
+ right: 0px; 
+ height: 5px;
+}
+
+#footer .page:after{ 
+ content: counter(page, upper-roman); 
+}
+
+.inline__espacios{
+	display: inline;
+}

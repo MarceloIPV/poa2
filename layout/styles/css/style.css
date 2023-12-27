@@ -1,0 +1,1004 @@
+.contenedor__negro{
+ background: #282827;
+ height:310px;
+}
+
+.contenedor__formulario__dos{
+ width: 25%;
+ padding-top: 4em;
+}
+
+.contenedor__tabla__total{
+	width: 100%!important;
+	overflow:scroll!important;
+}
+
+.contenedor__tabla__total table thead tr th, .contenedor__tabla__total table thead tr td{
+	font-size: 10px!important;
+	vertical-align: middle!important;
+}
+
+.table-wrapper {
+  width: 100%;
+  height: 300px; /* Altura de ejemplo */
+  overflow: auto;
+}
+
+.separador__objetos {
+	padding:.5em; 
+	border:1px 
+	solid #004d40;
+}
+
+.table-wrapper table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.scrollme{
+	overflow-x: auto;
+	width: 100%!important; 
+}
+
+.modificas__exeles__dis{
+     overflow:scroll!important;
+     height:200px!important;
+     width:500px!important;
+}
+
+.tabla__modificaciones__exeles{
+	width:500px!important;
+}
+
+.actividades__finales__seguis tr th { 
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+
+.iconos__blancos{
+ color: white;
+}
+
+.letras__blancas{
+ color: white;
+}
+
+.tabla__modificaciones__exeles tr td,.tabla__modificaciones__exeles tr th{
+	font-size:8px!important;
+}
+
+.modificas__exeles__dis{
+	width:400px; 
+	overflow:scroll;
+}
+
+
+.modificas__exeles__dis tr th{
+	vertical-align: middle!important;
+}
+
+#excel__modificaciones{
+	position: relative;
+	left: 1%!important;
+}
+
+.uppercase__texto{
+	text-transform:uppercase;
+}
+
+.select2-container{
+	width:100%!important;
+}
+
+.monto__especial__titulo{
+	font-size:20px;
+}
+
+#terminosCondiciones{
+	width:20px!important; 
+	height:20px!important;
+}
+
+#tablaPoaInicial tr th{
+	font-size:12px!important;
+	vertical-align: middle!important;
+}
+
+.borde__separacion__mo{
+	border:1px solid #0d47a1;
+}
+
+.textos__titulos__2d{
+	color:#0d47a1;
+	font-weight:bold;
+	font-size: 30px;
+}
+
+
+.textos__titulos{
+	color:#0d47a1;
+	font-weight:bold;
+}
+
+
+.table__bordes__ejecutados{
+  border-collapse: collapse;
+}
+
+.table__bordes__ejecutados tr td,.table__bordes__ejecutados tr th{
+	padding: .5em;
+}
+
+.table__bordes__ejecutados .fila__color th{
+	background: #1565c0;
+}
+
+.vertical__aign{
+	vertical-align:middle;
+}
+
+.justify{
+	text-align:  justify;
+}
+
+#tablaPoaInicial tr td{
+	font-size:12px!important;
+	vertical-align: middle!important;	
+}
+
+.textos__titulazos{
+	font-size:19px!important;
+}
+
+.seccion__observaciones{
+	width: 80%;
+}
+
+.pointer__botones{
+	cursor: pointer;
+}
+
+.color__azul{
+	color:blue!important;
+}
+
+.oblique__estilo{
+	font-style: oblique;
+}
+
+.overflow_c{
+	overflow: scroll!important;
+}
+
+#modalRegistros,#terminosCondicionesModal,#actividadesModal,#tablaItems,#tablaItems,#reasignarTra,#modalVisualizaMatrices{
+	overflow: scroll!important;
+}
+
+
+.opacity{
+	opacity:1!important;
+}
+
+.border__repentinos{
+	border:1px solid #00695c;
+	padding: .5em;
+	border-radius: 1em;
+}
+
+.hidden__overflow{
+	visibility: hidden;
+}
+
+.ocultos__elementos{
+	display: none!important;
+}
+
+.texto__titulo-hoja{
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.ancho__total__input{
+	width: 100%!important;
+	height: 30px!important;
+}
+
+.ancho__total__input__selects{
+	width: 100%!important;
+	height: 40px!important;
+}
+
+
+.ancho__total__input__selects__dos{
+	width: 100%!important;
+	height: 150px!important;
+}
+
+
+.ancho__total__textareas{
+	width: 100%!important;
+	height: 50px!important;
+}
+
+.sin__bordes__cs{
+	border:none!important;
+	text-align: center!important;
+}
+
+.justificado__textos{
+	text-align:justify!important;
+}
+
+.clase__ocultas{
+	display: none!important;
+}
+
+.enlaces__definidos__letras{
+	color:#0d47a1;
+	font-weight: bold;
+}
+
+.estilo__enlaces__modales{
+	background:#05296E; 
+	color:white; 
+	padding:.2em;
+}
+
+.content__configuraciones{
+	width: 70%;
+}
+
+.estilos__inputsRadios{
+ border-radius:.2em;
+ background: #bab9bf;
+ height: 35px;
+ width: 100%;
+ text-align:center;
+ border-radius:4em;
+ border:1px solid #f2f3f3;
+}
+
+.modales__titulos{
+	text-transform:uppercase!important;
+}
+
+.left__margen{
+	margin-left: 2%;
+}
+
+table tbody tr td{
+	font-size: 10px!important;
+}
+
+.active__menu{
+  background: #F6BB1B!important;
+  color:white!important;
+}
+
+.ajs-header{
+	display: none;
+}
+
+.estilo__botonDatatablets{
+	font-size:10px!important;
+}
+
+.enfacis__pequenio{
+	font-weight:bold;
+	font-size:8px;
+}
+
+.botones__iniciales{
+	padding: .5em;
+	background: #282827;
+	border:1px solid #f2f3f3;
+	text-align:center;
+	color:white;
+	border-radius:2em;
+	width: 70%;
+}
+
+.active__form{
+	background:#09ead4;
+}
+
+.ancho__imagen{
+	width: 88.3%;
+}
+
+.bloque__filas{
+	display: block;
+}
+
+.checkeds{
+	height: 20px!important;
+	width: 20px!important;
+}
+
+.redes__socialesLogin{
+    position: absolute;
+    background: rgba(0,0,0,0.4);
+    top: 34em;
+    width: 57%;
+    padding-bottom:.2em;
+}
+
+.color__loginTitulo{
+	color:white;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.titulos__portadas{
+	font-size:14px!important;
+}
+
+.titulo__enfasis{
+	font-weight:bold!important;
+}
+
+.iconos__inicio{
+	font-size: 30px;
+	border:3px solid #394f66;
+	border-radius:50%;
+	padding: .4em;
+}
+
+.titulo__principalLogin{
+	font-size:18px;
+}
+
+figure {
+   margin: 0 0 0rem!important; 
+}
+
+.bloques__registros{
+	width: 45%;
+}
+
+.margen__registros{
+	margin-left:5%;
+}
+
+.titulos__ModalSeccion{
+	font-weight:bold;
+	color: #0069A9;
+}
+
+.input__registros{
+	width: 100%;
+}
+
+.modal-title{
+	font-weight:bold;
+}
+
+.justificado__textos{
+	text-align: justify;
+}
+
+.negrilla__titulosEnlazados{
+	font-weight:bold;
+	color: #0069A9;
+}
+
+.error{
+	border:2px solid red;
+}
+
+.error2{
+	border:2px solid blue;
+}
+
+.botones__iniciales{
+	text-decoration:none;
+	cursor:pointer;
+	width: 80%;
+}
+
+.imagen__dasboardLogo{
+	width:50%;
+}
+
+[class*=sidebar-dark-] {
+    background-color: #212B5C!important;
+}
+
+.ancho__totalText{
+	width: 100%;
+}
+
+.ajs-primary{
+	display:flex!important; 
+	justify-content:center!important;
+}
+
+
+.select-css-decorator{
+	display: block;
+	font-size: 16px;
+	font-family: sans-serif;
+	font-weight: 700;
+	color: #444;
+	line-height: 1.3;
+	padding: .6em 1.4em .5em .8em;
+	width: 100%;
+	max-width: 100%; /* useful when width is set to anything other than 100% */
+	box-sizing: border-box;
+	margin: 0;
+	border: 1px solid #aaa;
+	box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+	border-radius: .5em;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: #fff;
+	/* note: bg image below uses 2 urls. The first is an svg data uri for the arrow icon, and the second is the gradient. 
+		for the icon, if you want to change the color, be sure to use `%23` instead of `#`, since it's a url. You can also swap in a different svg icon or an external image reference
+		
+	*/
+	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+	  linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+	background-repeat: no-repeat, repeat;
+	/* arrow icon position (1em from the right, 50% vertical) , then gradient position*/
+	background-position: right .7em top 50%, 0 0;
+	/* icon size, then gradient */
+	background-size: .65em auto, 100%;
+}
+
+ .tabla__matricesJ thead tr th { 
+            position: sticky!important;
+            top: 0!important;
+            z-index: 10!important;
+
+        }
+    
+        .tabla__matricesJ { 
+            height:200px!important;
+            overflow:scroll!important;
+        }
+
+
+@media (max-width: 850px) {
+
+.bloques__registros{
+	width: 100%;
+}
+
+.margen__registros{
+	margin-left:0%;
+	margin-top: 1em;
+}
+
+.iconos__inicio{
+	font-size: 20px;
+	border:3px solid #394f66;
+	border-radius:50%;
+}
+
+.contenedor__formulario__dos{
+	width:95%;
+}
+
+.ancho__imagen{
+	width:100%;
+}
+
+.redes__socialesLogin{
+    position: absolute;
+    background: rgba(0,0,0,0.4);
+    top: 21.5em;
+    width: 100%;
+}
+
+}
+
+.input__act:focus{
+	border:1px solid black !important;
+}
+
+.file-picker{
+  background-color:#F6BB1B;
+  color:black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: .5em;
+}
+
+.posicion__lupas{
+	position: relative;
+	left: -.8em;
+	top:-.7em;
+}
+
+.file-picker + [type='file']{
+  display:none;
+}
+
+/*cambios santi*/
+.modal-header{
+	background-image: url("../../../images/Imagen_header.png");
+	background-size: cover;
+	background-position: center 15%;
+}
+
+.modal-title{
+	color: var(--bs-white);
+}
+
+.modal-body, .modal-footer{
+	background-color: var(--bs-white);
+}
+
+.modal-body{
+	align-items:center;
+	row-gap: 1em;
+}
+
+#btn-cerrar{
+	background-color: var(--bs-white);
+	border: 1px solid var(--bs-dark);
+	color: var(--bs-dark);
+}
+
+#btn-cerrar:hover{
+	background-color: var(--bs-dark);
+	border: 1px solid var(--bs-dark);
+	color: var(--bs-white);
+}
+
+#btn-cerrar__icon{
+	position: absolute;
+	right: 1em;
+	top:1em;
+}
+
+.btn-close{
+	color: #fff!important;
+	background: none!important;
+}
+
+.btn-close i{
+	font-size: 2em;
+	color: var(--bs-white);
+}
+
+.btn__enviar{
+	background-color: rgba(33,42,92,1)!important;
+	color: var(--bs-white)!important;
+}
+
+.btn__enviar:hover{
+	background-color: rgba(33,42,92,.95)!important;
+}
+
+.letras__ver__poa{
+	height: 100%!important;
+	text-align: right!important;
+	font-weight: normal!important;
+	font-size: 1em!important;
+	margin-bottom:0!important;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.btn-info{
+	background-color: rgba(33,42,92,1)!important;
+}
+
+.ver__Tabla{
+	background-color: rgba(33,42,92,1)!important;
+}
+
+.btn-info:hover{
+	background-color: rgba(33,42,92,.95)!important;
+}
+
+/**{
+	outline: 1px solid red;
+}
+*/
+
+.border__contenedor{
+	border:1px solid #42a5f5;
+	border-radius: 1em;
+	padding: 1.5em;
+}
+
+/*=================================
+=            Tool tips            =
+=================================*/
+
+.btn-pluss {
+	 overflow: hidden;
+	 position: relative;
+	 display: block;
+	 padding-left: 5px;
+	 padding-right: 5px;
+	 border-radius: 22px;
+	 width: 20px;
+	 margin: 0 auto;
+	 background-color: white;
+	 border-radius: 15px;
+	 padding-bottom: 5px;
+	 transition: width 0.3s ease, border-radius 0.3s ease, padding-bottom 0.3s ease;
+}
+
+.btn-pluss a {
+	 display: block;
+	 position: relative;
+	 color: #004d40;
+	 text-decoration: none;
+	 overflow: hidden;
+	 padding: 5px;
+	 border-radius: 5px;
+}
+
+.btn-pluss .editar__ides{
+	 display: block;
+	 position: relative;
+	 color: #01579b;
+	 text-decoration: none;
+	 overflow: hidden;
+	 padding: 5px;
+	 border-radius: 5px;
+}
+
+.btn-pluss .eliminar__ides{
+	 display: block;
+	 position: relative;
+	 color: #c62828;
+	 text-decoration: none;
+	 overflow: hidden;
+	 padding: 5px;
+	 border-radius: 5px;
+}
+
+.btn-pluss a:hover {
+	 text-decoration: inherit;
+	 color: #004d40;
+	 background-color: inherit;
+	 transition: background-color 0.5s ease;
+}
+
+.btn-pluss .editar__ides:hover {
+	 text-decoration: inherit;
+	 color: white;
+	 background-color: #01579b;
+	 transition: background-color 0.5s ease;
+}
+
+
+.btn-pluss .eliminar__ides:hover {
+	 text-decoration: inherit;
+	 color: white;
+	 background-color: #c62828;
+	 transition: background-color 0.5s ease;
+}
+
+
+.btn-pluss:after {
+	 content: '+';
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 display: block;
+	 height: 20px;
+	 width: 20px;
+	 border-radius: 100%;
+	 line-height: 20px;
+	 text-align: center;
+	 font-size: 1.1rem;
+	 background-color: #0d47a1;
+	 color: white;
+	 transform: translateY(-50%) translateX(-50%);
+	 transition: all 0.3s 0.5s ease;
+	 cursor: pointer;
+	 cursor: hand;
+}
+
+.btn-pluss ul {
+	 opacity: 0;
+}
+
+.btn-pluss ul {
+	 margin-top: 15px;
+	 opacity: 0;
+	 width: 100%;
+	 margin-left: 0px;
+	 transition: all 0.5s ease;
+	 text-align: center;
+	 font-size: 0.9rem;
+}
+
+.btn-pluss ul li {
+	 background-color: #e4e4e4;
+	 margin-top: 5px;
+	 border-radius: 5px;
+	 width: 100%;
+	 height: 0px;
+	 overflow: hidden;
+	 transition: height 1s ease;
+}
+
+.btn-pluss-wrapper:hover .btn-pluss {
+	 width: 50px;
+	 border-radius: 15px;
+	 padding-bottom: 5px;
+	 transition: width 0.3s ease, border-radius 0.3s ease, padding-bottom 0.3s ease;
+}
+
+.btn-pluss-wrapper:hover .btn-pluss::after {
+	 transition: all 0.3s ease;
+	 left: 50%;
+	 top: 10px;
+	 transform: translateY(-5px) translateX(-50%);
+}
+
+.btn-pluss-wrapper:hover .btn-pluss ul {
+	 opacity: 1;
+	 margin-top: 30px;
+	 transition: all 1s ease;
+}
+
+.btn-pluss-wrapper:hover .btn-pluss li {
+	 height: 25px;
+	 transition: height 1s ease;
+}
+
+.btn-pluss-wrapper:hover .btn-pluss li:hover {
+	 border-bottom: 1px solid #d2c9c9;
+}
+
+/*=====  End of Tool tips  ======*/
+/*----------------------------
+	The Navigation Menu
+-----------------------------*/
+
+
+#colorNav > ul{
+	width: 70px; /* Increase when adding more menu items */
+	margin:0 auto;
+}
+
+#colorNav > ul > li{ /* will style only the top level li */
+	list-style: none;
+	box-shadow: 0 0 10px rgba(100, 100, 100, 0.2) inset,1px 1px 1px #CCC;
+	display: inline-block;
+	line-height: 1;
+	margin: 1px;
+	border-radius: 3px;
+	position:relative;
+}
+
+#colorNav > ul > li > a{
+	color:inherit;
+	text-decoration:none !important;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+
+#colorNav li ul{
+	position:absolute;
+	list-style:none;
+	text-align:center;
+	width:180px;
+	
+	margin-left:-90px;
+	top:2px;
+	font:bold 12px 'Open Sans Condensed', sans-serif;
+	
+	/* This is important for the show/hide CSS animation */
+	max-height:0px;
+	overflow:hidden;
+	
+	-webkit-transition:max-height 0.4s linear;
+	-moz-transition:max-height 0.4s linear;
+	transition:max-height 0.4s linear;
+}
+
+#colorNav li ul li{
+	background-color:#313131;
+}
+
+#colorNav li ul li a{
+
+	color:#fff !important;
+	text-decoration:none !important;
+	display:block;
+}
+
+#colorNav li ul li:nth-child(odd){ /* zebra stripes */
+	background-color:#363636;
+}
+
+#colorNav li ul li:hover{
+	background-color:#444;
+}
+
+#colorNav li ul li:first-child{
+	border-radius:3px 3px 0 0;
+	margin-top:25px;
+	position:relative;
+}
+
+#colorNav li ul li:first-child:before{ /* the pointer tip */
+	content:'';
+	position:absolute;
+	width:1px;
+	height:1px;
+	border:5px solid transparent;
+	border-bottom-color:#313131;
+	left:50%;
+	top:-10px;
+	margin-left:-5px;
+}
+
+#colorNav li ul li:last-child{
+	border-bottom-left-radius:3px;
+	border-bottom-right-radius:3px;
+}
+
+/* This will trigger the CSS */
+/* transition animation on hover */
+
+#colorNav li:hover ul{
+	max-height:200px; /* Increase when adding more dropdown items */
+}
+
+
+/*----------------------------
+	Color Themes
+-----------------------------*/
+
+
+#colorNav li.green{
+	/* This is the color of the menu item */
+	background-color:#00c08b;
+	
+	/* This is the color of the icon */
+	color:#127a5d;
+}
+
+#colorNav li.red{		background-color:#ea5080;color:#aa2a52;}
+#colorNav li.blue{		background-color:#53bfe2;color:#2884a2;}
+#colorNav li.yellow{	background-color:#f8c54d;color:#ab8426;}
+#colorNav li.purple{	background-color:#df6dc2;color:#9f3c85;}
+
+.vertice__seguimiento__top{
+	margin-top: 1em;
+	width: 100px!important;
+	left: 50px!important;
+}
+
+/*============================
+=            Tabs            =
+============================*/
+
+.season_tabs {
+  position: relative;   
+  min-height: 360px; /* This part sucks */
+  clear: both;
+  margin: 25px 0;
+}
+.season_tab {
+  float: left;  
+  clear: both;
+  width: 286px;
+}
+.season_tab label {
+    background: #eee;
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin-left: -1px;
+    font-size: 12px;
+    vertical-align: middle;
+    position: relative;
+    left: 1px;
+    width: 264px;
+    height: 68px;
+    display: table-cell;
+}
+.season_tab [type=radio] {
+  display: none;   
+}
+.season_content {
+  position: absolute;
+  top: 0;
+  left: 286px;
+  background: white;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  border: 1px solid #ccc;
+  height: 272px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+.season_content span {
+  animation: 0.5s ease-out 0s 1 slideInFromTop; 
+}
+[type=radio]:checked ~ label {
+  background: white;
+  border-bottom: 2px solid #8bc34a;
+  z-index: 2;
+}
+[type=radio]:checked ~ label ~ .season_content {
+  z-index: 1;
+}
+
+.enfacis__letras__reportes{
+	font-weight: bold;
+	color:black!important;
+}
+
+.vertical__elementos{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+/*=====  End of Tabs  ======*/
+.display__nones{
+	display:none!important;
+}
+
+.display__blocks{
+	display:block!important;
+}
+
+.fa-times-circle{
+	color:white!important;
+	font-size: 25px!important;
+}
+
+input{
+	color: black!important;
+}
+
+    .Opcion{
+        display: flex;
+        border-style: groove;
+        margin-top:2px;
+        justify-content: space-between;
+        background-color: #121B69;
+        color: white;
+        font-size: 15px;
+        width: 700px;
+        padding: .5em;
+    }
+
+    .Opcion__doces{
+		width: 700px; 
+		display: flex; 
+		justify-content: center; 
+		background: #F6BB1B!important; 
+		color:white;
+		padding: .5em;
+		margin-top: 2px;
+    }
+
+
+    .fas{
+        color: black;
+    }
+    #monto,#cuentas,#añosAnteriores{
+        display: none;
+    }
+    #menos,#menos2,#menos3{
+        display: none;
+    }
+    .tbl{
+        font-size: 15px;
+    }
+
+    .enlaces__blancos{
+    	color: white!important;
+    }

@@ -1,0 +1,82 @@
+:root {
+    --colorInput: #49454567;
+    --colorGradient: linear-gradient(to right, #3143b4 0%, #4656b0 51%, #878cb1 100%);
+}
+
+
+.btnguardar {
+    background: linear-gradient(to right, #1c2662 0%, #51577b 51%, #9b9eb3 100%);
+    border: none;
+    font-weight: 400;
+    cursor: pointer;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffff;
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.spantitulo{
+    font-size: 15px;
+}
+
+.spanestadofile{
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.letrapequenia{
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+.barra{
+    position: relative;
+    display: block;
+    width: 102%;
+}
+
+.barra::before{
+    content: "";
+    height: 3px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(to right, #3143b4 0%, #4656b0 51%, #878cb1 100%);
+    transition: 0.5s ease width;
+    left: 0;
+}
+
+
+.barra2{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.barra2::before{
+    content: "";
+    height: 3px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(to right, #3143b4 0%, #4656b0 51%, #878cb1 100%);
+    transition: 0.5s ease width;
+    left: 0;
+}
+
+
+
+#ojobtn{
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+}
+
+#mbodyalineacion{
+    align-items: flex-start;
+}

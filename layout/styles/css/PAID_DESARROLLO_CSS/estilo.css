@@ -1,0 +1,644 @@
+.modalR {
+  min-width: 73%;
+  top: 8%;
+  max-height: 70%;
+}
+
+#DivTablaItemsRubrosDesarrollo {
+  height: 55vh;
+  overflow-y: scroll;
+}
+
+#tituloComponenteJN {
+  word-spacing: 12px;
+  font-weight: bold;
+}
+
+#tituloJN {
+  word-spacing: 12px;
+  font-weight: bold;
+}
+
+#MontoJN {
+  font-weight: bold;
+}
+
+#paidJuegosNacionales tbody tr td {
+  padding: 10px;
+  text-align: center;
+  transform: scale(1.2);
+}
+
+#paidMedallasJuegosNacionales tbody tr td {
+  padding: 10px;
+  text-align: center;
+  transform: scale(1.2);
+}
+
+
+
+#paidReporteGeneralDesarrollo tbody tr td {
+  padding: 10px;
+  text-align: center;
+  transform: scale(1.2);
+}
+
+#paidNecesidadesIndividuales1 tbody tr td {
+  padding: 10px;
+  text-align: center;
+  transform: scale(1.2);
+}
+
+#paidBonoDeportivoJuegosNacionales tbody tr td {
+  padding: 10px;
+  text-align: center;
+  transform: scale(1.2);
+}
+
+/******************************** HOSP ALIM HIDR JA************************************/
+#paidHospAlimDI tbody tr td {
+  padding: 10px;
+  text-align: center;
+  transform: scale(1.05);
+}
+
+#paidHospAlimDC tbody tr td {
+  padding: 10px;
+  text-align: center;
+  transform: scale(1.05);
+}
+
+#paidHidratacionDI tbody tr td {
+  padding: 10px;
+  text-align: center;
+  transform: scale(1.05);
+}
+
+#paidHidratacionDC tbody tr td {
+  padding: 10px;
+  text-align: center;
+  transform: scale(1.05);
+}
+
+#paidHospAlimJA tbody tr td {
+  padding: 10px;
+  text-align: center;
+  transform: scale(1.05);
+}
+
+#paidHidratacionJA tbody tr td {
+  padding: 10px;
+  text-align: center;
+  transform: scale(1.05);
+}
+
+#paidJuegosNacionalesPTC tbody tr td {
+  padding: 10px;
+  text-align: center;
+  transform: scale(1.05);
+}
+
+#paidUniformes tbody tr td {
+  padding: 10px;
+  text-align: center;
+  transform: scale(1.05);
+}
+
+#paidIndumentariaPApoyo tbody tr td {
+  padding: 10px;
+  text-align: center;
+  transform: scale(1.05);
+}
+
+#paidDeporteDelegacionHospAlimJA tbody tr td {
+  padding: 10px;
+  text-align: center;
+  transform: scale(1.05);
+}
+
+#paidDeporteDelegacionHidrJA tbody tr td {
+  padding: 10px;
+  text-align: center;
+  transform: scale(1.05);
+}
+
+#paidPasajesAereos tbody tr td {
+  padding: 10px;
+  text-align: center;
+  transform: scale(1.05);
+}
+
+
+
+.modalAviso {
+  margin: 20px;
+  font-size: 18px;
+}
+
+.btn-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.btn-box button {
+  display: inline-block;
+  padding: 14px 75px;
+  background-color: #144a9e;
+  color: #ffffff;
+  border: 1.5px solid #144a9e;
+  border-radius: 30px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  margin-top: 45px;
+}
+
+
+
+#selectPersonalizado {
+  /* Reset Select */
+  appearance: none;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  /* Personalize */
+  flex: 1;
+  padding: 0 1em;
+  color: #dddddd;
+  background-color: #2C3E50;
+  background-image: none;
+  cursor: pointer;
+}
+
+/* Remove IE arrow */
+#selectPersonalizado::-ms-expand {
+  display: none;
+}
+
+/* select SEGUROS*/
+
+.selectPersonalizado {
+  /* Reset Select */
+  appearance: none;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  /* Personalize */
+  flex: 1;
+  padding: 0 1em;
+  color: #dddddd;
+  background-color: #2C3E50;
+  background-image: none;
+  cursor: pointer;
+}
+
+/* Remove IE arrow */
+.selectPersonalizado::-ms-expand {
+  display: none;
+}
+
+
+/* Custom Select wrapper */
+.select {
+  position: relative;
+  display: flex;
+  width: 60em;
+  height: 3em;
+  border-radius: .25em;
+  overflow: hidden;
+  color: #dddddd;
+  margin: 2em auto;
+  
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  background-color: #34495e;
+  transition: .25s all ease;
+  pointer-events: none;
+}
+/* Transition */
+.select:hover::after {
+  color: #f39c12;
+}
+
+
+/********************* Select HOSP ALIM HID **********************/
+#idSelecHopAlimHid {
+  /* Reset Select */
+  appearance: none;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  /* Personalize */
+  flex: 1;
+  padding: 0 1em;
+  color: #dddddd;
+  background-color: #2C3E50;
+  background-image: none;
+  cursor: pointer;
+}
+
+/* Remove IE arrow */
+#idSelecHopAlimHid::-ms-expand {
+  display: none;
+}
+/**************************** Deporte IND CONJ  -  HOSP ALIM ************/
+#idSelecDIDC {
+  /* Reset Select */
+  appearance: none;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  /* Personalize */
+  flex: 1;
+  padding: 0 1em;
+  color: #dddddd;
+  background-color: #2C3E50;
+  background-image: none;
+  cursor: pointer;
+}
+
+/* Remove IE arrow */
+#idSelecDIDC::-ms-expand {
+  display: none;
+}
+
+/**********************************Div select HOSP ALIM HID ******************/
+/* Custom Select wrapper */
+.selectHospAlimHidT {
+  position: relative;
+  display: flex;
+  width: 60em;
+  height: 3em;
+  border-radius: .25em;
+  overflow: hidden;
+  color: #dddddd;
+  margin: 0em auto;
+  
+}
+/* Arrow */
+.selectHospAlimHidT::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  background-color: #34495e;
+  transition: .25s all ease;
+  pointer-events: none;
+}
+/* Transition */
+.selectHospAlimHidT:hover::after {
+  color: #f39c12;
+}
+
+/******************************** Div Select Deporte IND CONJ -  HOSp ALIM ****************************/
+/* Custom Select wrapper */
+.selectDIDCT {
+  position: relative;
+  display: flex;
+  width: 60em;
+  height: 3em;
+  border-radius: .25em;
+  overflow: hidden;
+  color: #dddddd;
+  margin: 0em auto;
+  
+}
+/* Arrow */
+.selectDIDCT::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  background-color: #34495e;
+  transition: .25s all ease;
+  pointer-events: none;
+}
+/* Transition */
+.selectDIDCT:hover::after {
+  color: #f39c12;
+}
+
+/********************* Deporte IND CONJ  -  HIDR **********************/
+#idSelecDIDCHI {
+  /* Reset Select */
+  appearance: none;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  /* Personalize */
+  flex: 1;
+  padding: 0 1em;
+  color: #dddddd;
+  background-color: #2C3E50;
+  background-image: none;
+  cursor: pointer;
+}
+
+/* Remove IE arrow */
+#idSelecDIDC::-ms-expand {
+  display: none;
+}
+/**********************************Div select Deporte IND CONJ - HIDR ******************/
+/* Custom Select wrapper */
+.selectHospAlimHidT {
+  position: relative;
+  display: flex;
+  width: 60em;
+  height: 3em;
+  border-radius: .25em;
+  overflow: hidden;
+  color: #dddddd;
+  margin: 0em auto;
+  
+}
+/* Arrow */
+.selectDIDCT::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  background-color: #34495e;
+  transition: .25s all ease;
+  pointer-events: none;
+}
+/* Transition */
+.selectDIDCT:hover::after {
+  color: #f39c12;
+}
+
+
+/* Matrices Generales Auxiliares JUegos Nacionales  */
+
+#paidAdecentameintoJN tbody tr td {
+  padding: 10px;
+  text-align: center;
+  transform: scale(1.2);
+}
+
+#paidBienesJN tbody tr td {
+  padding: 10px;
+  text-align: center;
+  transform: scale(1.2);
+}
+
+#paidMedicinasJN tbody tr td {
+  padding: 10px;
+  text-align: center;
+  transform: scale(1.2);
+}
+
+#paidAlqEquiposJN tbody tr td {
+  padding: 10px;
+  text-align: center;
+  transform: scale(1.2);
+}
+
+#paidComEquiposJN tbody tr td {
+  padding: 10px;
+  text-align: center;
+  transform: scale(1.2);
+}
+
+#paidLogEventosJN tbody tr td {
+  padding: 10px;
+  text-align: center;
+  transform: scale(1.2);
+}
+
+#paidPublicidadJN tbody tr td {
+  padding: 10px;
+  text-align: center;
+  transform: scale(1.2);
+}
+
+#paidAcreditacionesJN tbody tr td {
+  padding: 10px;
+  text-align: center;
+  transform: scale(1.2);
+}
+
+/***********************************************************************/
+/********************* Select uniformes **********************/
+#idSelecUnifAdaptados {
+  /* Reset Select */
+  appearance: none;
+  outline: 0;
+  border: 0;
+  box-shadow: none;
+  /* Personalize */
+  flex: 1;
+  padding: 0 1em;
+  color: #dddddd;
+  background-color: #2C3E50;
+  background-image: none;
+  cursor: pointer;
+}
+
+/* Remove IE arrow */
+#idSelecUnifAdaptados::-ms-expand {
+  display: none;
+}
+/******************************** Div Select iniformes ****************************/
+/* Custom Select wrapper */
+.divUniformesAdaptadosTotal {
+  position: relative;
+  display: flex;
+  width: 60em;
+  height: 3em;
+  border-radius: .25em;
+  overflow: hidden;
+  color: #dddddd;
+  margin: 0em auto;
+  
+}
+/* Arrow */
+.divUniformesAdaptadosTotal::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  background-color: #34495e;
+  transition: .25s all ease;
+  pointer-events: none;
+}
+/* Transition */
+.divUniformesAdaptadosTotal:hover::after {
+  color: #f39c12;
+}
+
+.fa-angle-left{
+
+  color: white;
+}
+
+.btnObligaciones{
+  color: white!important;
+}
+
+.dt-button{
+  padding: 0!important;;
+  border: none!important;;
+}
+
+
+
+.buttonD {
+ 
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.1em 1em;
+  position: relative;
+  border: none!important;
+  text-decoration: none;
+  transition: 0.3s ease all;
+  z-index: 1;
+}
+
+
+.modal {
+  overflow: auto !important;
+}
+
+
+
+
+.cardSubirArchivo {
+  border-radius: 10px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
+  padding: 10px 30px;
+  margin: 20px;
+}
+
+.cardSubirArchivo h3{
+    font-size: 22px;
+    font-weight:500;
+}
+
+.drop_boxSubirArchivoTransferenciasEXCEL {
+    margin: 10px 0;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 3px dotted #a3a3a3;
+    border-radius: 5px;
+}
+
+.drop_boxSubirArchivoTransferenciasCSV {
+  margin: 10px 0;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 3px dotted #a3a3a3;
+  border-radius: 5px;
+}
+
+.drop_boxSubirArchivoBancosEXCEL {
+  margin: 10px 0;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 3px dotted #a3a3a3;
+  border-radius: 5px;
+}
+
+.drop_boxSubirArchivoBancosCSV {
+margin: 10px 0;
+padding: 30px;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+border: 3px dotted #a3a3a3;
+border-radius: 5px;
+}
+
+.drop_boxSubirArchivoTransferenciasCSV h4{
+    font-size: 16px;
+    font-weight:400; 
+    color:#2e2e2e;
+
+}
+
+.drop_boxSubirArchivoTransferenciasCSV h4{
+  font-size: 16px;
+  font-weight:400; 
+  color:#2e2e2e;
+
+}
+
+.drop_boxSubirArchivoBancosCSV h4{
+  font-size: 16px;
+  font-weight:400; 
+  color:#2e2e2e;
+
+}
+
+.drop_boxSubirArchivoBancosCSV h4{
+font-size: 16px;
+font-weight:400; 
+color:#2e2e2e;
+
+}
+
+.drop_boxSubirArchivoTransferenciasEXCEL p{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    color:#a3a3a3;
+}
+
+.drop_boxSubirArchivoTransferenciasCSV p{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  color:#a3a3a3;
+}
+
+.drop_boxSubirArchivoBancosEXCEL p{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  color:#a3a3a3;
+}
+
+.drop_boxSubirArchivoBancosCSV p{
+margin-top: 10px;
+margin-bottom: 20px;
+font-size: 12px;
+color:#a3a3a3;
+}
+
+.btn{
+    text-decoration: none;
+    background-color: #4796ff;
+    color: #1428dd;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+}
+
+.btn-color-file{
+  background-color: #202a5d!important;
+  color:#202a5d!important;
+}
