@@ -1747,10 +1747,27 @@ var segmentosJsAjax=function(parametro1,parametro2){
 
 
 				            	if (idActividades==1 && (arrayGrupo53.length>0 || arrayGrupo58.length>0 || arrayGrupo57.length>0)) {
+									
 
 				            		var arrayMatriz = arrayGrupo53.concat(arrayGrupo57);
 
-				            		$(".fila__actividad1"+idActividades).append('<br><div class="row d d-flex justify-content-center;"><a class="col-12" style="color:white; cursor:pointer; text-transform:uppercase;" attr="'+arrayMatriz+'" idOrganismo="'+$("#organismoIdPrin").val()+'" idActividad="'+idActividades+'" data-bs-toggle="modal" data-bs-target="#modalMatriz'+idActividades+'" id="enlaceMatriz'+idActividades+'">Actividad Administrativa</a></div>');
+									$.getScript("layout/scripts/js/poaInicial2024/index.js",function(){
+
+										$(".fila__actividad1"+idActividades).append('<br><div class="row d d-flex justify-content-center;"><select class="form-select" id="select__actAdm"><option value="0">--Seleccione una opcion--</option><option value="manual">Manual</option><option value="excel">Excel</option></select></div>');
+
+
+
+										$(".fila__actividad1"+idActividades).append('<br><div class="cargaManual__actAdm"><div class="row d d-flex justify-content-center;"><a class="col-12" style="color:white; cursor:pointer; text-transform:uppercase;" attr="'+arrayMatriz+'" idOrganismo="'+$("#organismoIdPrin").val()+'" idActividad="'+idActividades+'" data-bs-toggle="modal" data-bs-target="#modalMatriz'+idActividades+'" id="enlaceMatriz'+idActividades+'">Actividad Administrativa (Carga Manual)</a></div></div>');
+
+										$(".fila__actividad1"+idActividades).append('<br><div class="cargarExcel__actAdm"><div class="d d-flex justify-content-center;"><a class="col-12" style="color:white; cursor:pointer; text-transform:uppercase;" attr="'+arrayMatriz+'" idOrganismo="'+$("#organismoIdPrin").val()+'" idActividad="'+idActividades+'" data-bs-toggle="modal" data-bs-target="#modalMatriz'+idActividades+'" id="enlaceMatriz'+idActividades+'">Actividad Administrativa (Carga Excel)</a></div></div>');
+
+										$(".cargaManual__actAdm").hide();
+										$(".cargarExcel__actAdm").hide();
+
+
+										selectorExcel__poa__inicial($("#select__actAdm"),$(".cargarExcel__actAdm"),$(".cargaManual__actAdm"));
+
+									});
 
 				            		/*================================================================
 				            		=            Añadir valores a modal y construir tabla            =
