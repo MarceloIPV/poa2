@@ -184,9 +184,6 @@
 						require_once self::$vista.self::$contenidoVistas.$_GET["ruta"].self::$nomenclatura;
 					}
 					
-				}else if($_GET["ruta"]=="decrementos" || $_GET["ruta"]=="incrementos" || $_GET["ruta"]=="revision" || $_GET["ruta"]=="reporteriaFinalIncrementos" ){
-
-					require_once self::$vista.self::$contenidoVistas."INCREMENTOS__V1/".$_GET["ruta"].self::$nomenclatura;
 				
 				}else if($_GET["ruta"]=="planificacion"){
 
