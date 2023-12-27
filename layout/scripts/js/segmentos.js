@@ -1759,13 +1759,15 @@ var segmentosJsAjax=function(parametro1,parametro2){
 
 										$(".fila__actividad1"+idActividades).append('<br><div class="cargaManual__actAdm"><div class="row d d-flex justify-content-center;"><a class="col-12" style="color:white; cursor:pointer; text-transform:uppercase;" attr="'+arrayMatriz+'" idOrganismo="'+$("#organismoIdPrin").val()+'" idActividad="'+idActividades+'" data-bs-toggle="modal" data-bs-target="#modalMatriz'+idActividades+'" id="enlaceMatriz'+idActividades+'">Actividad Administrativa (Carga Manual)</a></div></div>');
 
-										$(".fila__actividad1"+idActividades).append('<br><div class="cargarExcel__actAdm"><div class="d d-flex justify-content-center;"><a class="col-12" style="color:white; cursor:pointer; text-transform:uppercase;" attr="'+arrayMatriz+'" idOrganismo="'+$("#organismoIdPrin").val()+'" idActividad="'+idActividades+'" data-bs-toggle="modal" data-bs-target="#modalMatriz'+idActividades+'" id="enlaceMatriz'+idActividades+'">Actividad Administrativa (Carga Excel)</a></div></div>');
+										$(".fila__actividad1"+idActividades).append('<br><div class="cargarExcel__actAdm"><div class="d d-flex justify-content-center;"><a class="col-12" style="color:white; cursor:pointer; text-transform:uppercase;" attr="'+arrayMatriz+'" idOrganismo="'+$("#organismoIdPrin").val()+'" idActividad="'+idActividades+'" data-bs-toggle="modal" data-bs-target="#subirArchivoExcelPOA" id="enlaceMatriz__excel'+idActividades+'">Actividad Administrativa (Carga Excel)</a></div></div>');
 
 										$(".cargaManual__actAdm").hide();
 										$(".cargarExcel__actAdm").hide();
 
 
 										selectorExcel__poa__inicial($("#select__actAdm"),$(".cargarExcel__actAdm"),$(".cargaManual__actAdm"));
+
+										construccion__modal__excel($("#enlaceMatriz__excel"+idActividades),["Titulo"],"act__administrativas");
 
 									});
 
