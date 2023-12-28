@@ -184,6 +184,7 @@
 						require_once self::$vista.self::$contenidoVistas.$_GET["ruta"].self::$nomenclatura;
 					}
 					
+
 				}else if($_GET["ruta"]=="planificacion"){
 
 					require_once self::$vista.self::$contenidoVistas."POA__INICIAL/".$_GET["ruta"].self::$nomenclatura;
