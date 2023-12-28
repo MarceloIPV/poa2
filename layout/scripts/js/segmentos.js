@@ -1767,7 +1767,7 @@ var segmentosJsAjax=function(parametro1,parametro2){
 
 										selectorExcel__poa__inicial($("#select__actAdm"),$(".cargarExcel__actAdm"),$(".cargaManual__actAdm"));
 
-										construccion__modal__excel($("#enlaceMatriz__excel"+idActividades),["Titulo"],"act__administrativas");
+										construccion__modal__excel($("#enlaceMatriz__excel"+idActividades),["Titulo","TITULO2"],"act__administrativas");
 
 									});
 
