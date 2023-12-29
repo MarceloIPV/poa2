@@ -1743,7 +1743,10 @@ var segmentosJsAjax=function(parametro1,parametro2){
 
 				            		$(".fila__ac"+idActividades).append('<td><center class="fila__actividad1'+idActividades+'"></div>');
 				            		
-				            	}
+				            	}else if(idActividades== 2){
+									$(".fila__ac"+idActividades).append('<td><center class="fila__actividad2'+idActividades+'"></div>');
+								}
+
 
 
 				            	if (idActividades==1 && (arrayGrupo53.length>0 || arrayGrupo58.length>0 || arrayGrupo57.length>0)) {
@@ -1753,7 +1756,7 @@ var segmentosJsAjax=function(parametro1,parametro2){
 
 									$.getScript("layout/scripts/js/poaInicial2024/index.js",function(){
 
-										$(".fila__actividad1"+idActividades).append('<br><div class="row d d-flex justify-content-center;"><select class="form-select" id="select__actAdm"><option value="0">--Seleccione una opcion--</option><option value="manual">Manual</option><option value="excel">Excel</option></select></div>');
+										$(".fila__actividad1"+idActividades).append('<br><div class="row d d-flex justify-content-center;"><select class="form-select" id="select__actAdm'+idActividades+'"><option value="0">--Seleccione una opcion--</option><option value="manual">Manual</option><option value="excel">Excel</option></select></div>');
 
 
 
@@ -1765,9 +1768,9 @@ var segmentosJsAjax=function(parametro1,parametro2){
 										$(".cargarExcel__actAdm").hide();
 
 
-										selectorExcel__poa__inicial($("#select__actAdm"),$(".cargarExcel__actAdm"),$(".cargaManual__actAdm"));
+										selectorExcel__poa__inicial($("#select__actAdm"+idActividades),$(".cargarExcel__actAdm"),$(".cargaManual__actAdm"));
 
-										construccion__modal__excel($("#enlaceMatriz__excel"+idActividades),["Titulo","TITULO2"],"act__administrativas");
+										construccion__modal__excel($("#enlaceMatriz__excel"+idActividades),["ITEM PRESUPUESTARIO (CODIGO)",	"Tipo de Contratación (Campo obligatorio para ingresar la información)",	"Justificación de la adquisición del bien o servicio",	"Cantidad del bien o servicio a adquirir",	"ENERO",	"FEBRERO",	"MARZO",	"ABRIL",	"MAYO",	"JUNIO",	"JULIO",	"AGOSTO",	"SEPTIEMBRE",	"OCTUBRE",	"NOVIEMBRE",	"DICIEMBRE",	"TOTAL Programación Financiera"],"act__administrativas");
 
 									});
 
@@ -1834,8 +1837,20 @@ var segmentosJsAjax=function(parametro1,parametro2){
 
 			            		if (idActividades==1 && arrayAguaLuz.length>0) {
 
+									$.getScript("layout/scripts/js/poaInicial2024/index.js",function(){
 
-									$(".fila__actividad1"+idActividades).append('<br><div class="row d d-flex justify-content-center;"><a class="col-12" style="color:white; cursor:pointer; text-transform:uppercase;" attr="'+arrayMatriz+'" idOrganismo="'+$("#organismoIdPrin").val()+'" idActividad="'+idActividades+'" data-bs-toggle="modal" data-bs-target="#modalMatriz'+idActividades+'" id="enlaceMatrizSuministro'+idActividades+'">Suministros</a></div>');
+										$(".fila__actividad1"+idActividades).append('<br><div class="cargaManual__actAdm"><div class="row d d-flex justify-content-center;"><a class="col-12" style="color:white; cursor:pointer; text-transform:uppercase;" attr="'+arrayMatriz+'" idOrganismo="'+$("#organismoIdPrin").val()+'" idActividad="'+idActividades+'" data-bs-toggle="modal" data-bs-target="#modalMatriz'+idActividades+'" id="enlaceMatrizSuministro'+idActividades+'">Suministros (Carga Manual)</a></div></div>');
+
+										$(".fila__actividad1"+idActividades).append('<br><div class="cargarExcel__actAdm"><div class="d d-flex justify-content-center;"><a class="col-12" style="color:white; cursor:pointer; text-transform:uppercase;" attr="'+arrayMatriz+'" idOrganismo="'+$("#organismoIdPrin").val()+'" idActividad="'+idActividades+'" data-bs-toggle="modal" data-bs-target="#subirArchivoExcelPOA" id="enlaceMatrizSuministro__excel'+idActividades+'">Suministros (Carga Excel)</a></div></div>');
+
+										$(".cargaManual__actAdm").hide();
+										$(".cargarExcel__actAdm").hide();
+
+										selectorExcel__poa__inicial($("#select__actAdm"+idActividades),$(".cargarExcel__actAdm"),$(".cargaManual__actAdm"));
+
+										construccion__modal__excel($("#enlaceMatrizSuministro__excel"+idActividades),["ITEM PRESUPUESTARIO (CODIGO)", "Tipo de Contratación (Campo obligatorio para ingresar la información)", "TIPO", "Nombre del escenario deportivo o Residencia para Fomento Deportivo",	"Suministro Energía","Suministro Agua"],"suminis__administrativas");
+
+									});
 
 				            		/*================================================================
 				            		=            Añadir valores a modal y construir tabla            =
@@ -1905,7 +1920,33 @@ var segmentosJsAjax=function(parametro1,parametro2){
 				            	if (idActividades==2) {
 
 
-				            		$(".fila__ac"+idActividades).append('<td class="filaA2__'+idActividades+'"><center><div class="row d d-flex justify-content-center;"><a class="col-12" style="color:white; cursor:pointer; text-transform:uppercase;" attr="'+array3+'" idOrganismo="'+$("#organismoIdPrin").val()+'" idActividad="'+idActividades+'" data-bs-toggle="modal" data-bs-target="#modalMatriz'+idActividades+'" id="enlaceMatriz'+idActividades+'">MANTENIMIENTO</a></div></center></td>');
+				            		// $(".fila__ac"+idActividades).append('<td class="filaA2__'+idActividades+'"><center><div class="row d d-flex justify-content-center;"><a class="col-12" style="color:white; cursor:pointer; text-transform:uppercase;" attr="'+array3+'" idOrganismo="'+$("#organismoIdPrin").val()+'" idActividad="'+idActividades+'" data-bs-toggle="modal" data-bs-target="#modalMatriz'+idActividades+'" id="enlaceMatriz'+idActividades+'">MANTENIMIENTO</a></div></center></td>');
+
+				            		/*================================================================
+				            		=            Añadir valores a modal y construir tabla            =
+				            		================================================================*/
+
+
+									$.getScript("layout/scripts/js/poaInicial2024/index.js",function(){
+
+										$(".fila__actividad2"+idActividades).append('<br><div class="row d d-flex justify-content-center;"><select class="form-select" id="select__actAdm'+idActividades+'"><option value="0">--Seleccione una opcion--</option><option value="manual">Manual</option><option value="excel">Excel</option></select></div>');
+
+
+
+										$(".fila__actividad2"+idActividades).append('<br><div class="cargaManual__actAdm"><div class="row d d-flex justify-content-center;"><a class="col-12" style="color:white; cursor:pointer; text-transform:uppercase;" attr="'+arrayMatriz+'" idOrganismo="'+$("#organismoIdPrin").val()+'" idActividad="'+idActividades+'" data-bs-toggle="modal" data-bs-target="#modalMatriz'+idActividades+'" id="enlaceMatriz'+idActividades+'">MANTENIMIENTO (Carga Manual)</a></div></div>');
+
+										$(".fila__actividad2"+idActividades).append('<br><div class="cargarExcel__actAdm"><div class="d d-flex justify-content-center;"><a class="col-12" style="color:white; cursor:pointer; text-transform:uppercase;" attr="'+arrayMatriz+'" idOrganismo="'+$("#organismoIdPrin").val()+'" idActividad="'+idActividades+'" data-bs-toggle="modal" data-bs-target="#subirArchivoExcelPOA" id="enlaceMatriz__excel'+idActividades+'">MANTENIMIENTO (Carga Excel)</a></div></div>');
+
+										$(".cargaManual__actAdm").hide();
+										$(".cargarExcel__actAdm").hide();
+
+
+										selectorExcel__poa__inicial($("#select__actAdm"+idActividades),$(".cargarExcel__actAdm"),$(".cargaManual__actAdm"));
+
+										construccion__modal__excel($("#enlaceMatriz__excel"+idActividades),["Item","Tipo de contratación","Nombre Ítem","Nombre infraestructura","Provincia","Dirección","Estado","Tipo recursos","Tipo inversión","Detalle inversión","Tipo Mantenimiento","Materiales servicios <br> a <br> requerir para el <br> mantenimiento","Fecha último <br> mantenimiento <br> realizado","Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre","Total"],"mantenimiento");
+
+									});
+
 
 				            		/*================================================================
 				            		=            Añadir valores a modal y construir tabla            =
