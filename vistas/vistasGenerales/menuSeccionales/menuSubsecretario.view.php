@@ -480,7 +480,74 @@ $perfilObservador = $_SESSION["perfilObservador"];
 
 			<?php endif ?>
 
+			<li class="nav-item <?= $objetoInformacion->getUrlDinamicaUna('poa2/', $_SERVER['REQUEST_URI'], array("incrementosRevisorCoordinacion","incrementosRevisorCoordinacionRecomendado","incrementosRevisorInfra","incrementosRevisorInfraRecomendado")); ?>">
 
+			<a href="#" class="nav-link">
+				<i class="fa fa-dollar-sign"></i>
+				&nbsp;
+				<p>
+					Incrementos
+					<i class="fa fa-angle-left right"></i>
+					<span class="badge badge-info right"></span>
+				</p>
+			</a>
+
+			<ul class="nav nav-treeview">
+
+
+			<li class="nav-item">
+
+				<a href="incrementosRevisorCoordinacion" class="nav-link <?= $objetoInformacion->getUrlDinamica('poa2/', $_SERVER['REQUEST_URI'], 'incrementosRevisorCoordinacion'); ?>">
+					<i class="fa fa-clipboard"></i>
+					&nbsp;
+					<p>Recibidos (Formativo y Recreativo)</p>
+				</a>
+
+			</li>
+
+
+			<?php if ($informacionObjeto[1] == 4) : ?>
+
+				<li class="nav-item">
+
+					<a href="incrementosRevisorCoordinacionRecomendado" class="nav-link <?= $objetoInformacion->getUrlDinamica('poa2/', $_SERVER['REQUEST_URI'], 'incrementosRevisorCoordinacionRecomendado'); ?>">
+						<i class="fa fa-file-signature"></i>
+						&nbsp;
+						<p>Recomendados (Formativo y Recreativo)</p>
+					</a>
+
+				</li>
+
+			<?php endif ?>
+
+			<li class="nav-item">
+
+				<a href="incrementosRevisorInfra" class="nav-link <?= $objetoInformacion->getUrlDinamica('poa2/', $_SERVER['REQUEST_URI'], 'incrementosRevisorInfra'); ?>">
+					<i class="fa fa-clipboard"></i>
+					&nbsp;
+					<p>Recibidos (Infraestructura)</p>
+				</a>
+
+			</li>
+
+
+			<?php if ($informacionObjeto[1] == 4) : ?>
+
+				<li class="nav-item">
+
+					<a href="incrementosRevisorInfraRecomendado" class="nav-link <?= $objetoInformacion->getUrlDinamica('poa2/', $_SERVER['REQUEST_URI'], 'incrementosRevisorInfraRecomendado'); ?>">
+						<i class="fa fa-file-signature"></i>
+						&nbsp;
+						<p>Recomendados (Infraestructura)</p>
+					</a>
+
+				</li>
+
+			<?php endif ?>
+
+			</ul>
+
+		</li>
 	
 
 		</ul>
@@ -1478,6 +1545,65 @@ $perfilObservador = $_SESSION["perfilObservador"];
 		</li>
 
 		</ul>
+
+		<ul class="nav nav-treeview">
+		<li class="nav-item <?= $objetoInformacion->getUrlDinamicaUna('poa2/', $_SERVER['REQUEST_URI'], array("incrementos","decrementos","reporteriaFinalIncrementos","revision")); ?>">
+
+			<a href="#" class="nav-link">
+				<i class="fa fa-dollar-sign"></i>
+				&nbsp;
+				<p>
+					Incrementos
+					<i class="fa fa-angle-left right"></i>
+					<span class="badge badge-info right"></span>
+				</p>
+			</a>
+
+			<ul class="nav nav-treeview">
+
+
+				<li class="nav-item">
+
+					<a href="incrementosRevisor" class="nav-link <?= $objetoInformacion->getUrlDinamica('poa2/', $_SERVER['REQUEST_URI'], 'incrementosRevisor'); ?>">
+						<i class="fa fa-tasks"></i>
+						&nbsp;
+						<p>Tramites Incrementos</p>
+            
+            		</a>
+
+				</li>
+
+				<?php if ($informacionObjeto[1] != 3) : ?>
+
+					<li class="nav-item">
+
+						<a href="incrementosRevisorRecomendado" class="nav-link <?= $objetoInformacion->getUrlDinamica('poa2/', $_SERVER['REQUEST_URI'], 'incrementosRevisorRecomendado'); ?>">
+							<i class="fa fa-tasks"></i>
+							&nbsp;
+							<p>Tramites Incrementos Recomendados</p>
+				
+						</a>
+
+					</li>
+
+				<?php endif ?>
+
+				<li class="nav-item">
+
+					<a href="recorridoIncrementos" class="nav-link <?= $objetoInformacion->getUrlDinamica('poa2/', $_SERVER['REQUEST_URI'], 'recorridoIncrementos'); ?>">
+						<i class="fa fa-tasks"></i>
+						&nbsp;
+						<p>Recorrido</p>
+            
+            		</a>
+
+				</li>
+
+			</ul>
+
+		</li>
+
+	</ul>
 
 	</li>
 		
