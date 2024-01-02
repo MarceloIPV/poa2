@@ -1770,7 +1770,7 @@ var segmentosJsAjax=function(parametro1,parametro2){
 
 										selectorExcel__poa__inicial($("#select__actAdm"+idActividades),$(".cargarExcel__actAdm"),$(".cargaManual__actAdm"));
 
-										construccion__modal__excel($("#enlaceMatriz__excel"+idActividades),["ITEM PRESUPUESTARIO (CODIGO)",	"Tipo de Contratación (Campo obligatorio para ingresar la información)",	"Justificación de la adquisición del bien o servicio",	"Cantidad del bien o servicio a adquirir",	"ENERO",	"FEBRERO",	"MARZO",	"ABRIL",	"MAYO",	"JUNIO",	"JULIO",	"AGOSTO",	"SEPTIEMBRE",	"OCTUBRE",	"NOVIEMBRE",	"DICIEMBRE",	"TOTAL Programación Financiera"],"act__administrativas");
+										construccion__modal__excel($("#enlaceMatriz__excel"+idActividades),["ITEM PRESUPUESTARIO (CODIGO)",	"Tipo de Contratación (Campo obligatorio para ingresar la información)",	"Justificación de la adquisición del bien o servicio",	"Cantidad del bien o servicio a adquirir"],"act__administrativas","documentos/POAINICIAL_MATRICES/MATRIZ1.xlsx");
 
 									});
 
