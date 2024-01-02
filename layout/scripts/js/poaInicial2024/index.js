@@ -1,5 +1,49 @@
 // $(document).ready(function () {
 
+
+function datatabletsConfiguration(tabla, columnDefs) {
+  var table = $(tabla).DataTable({
+    language: {
+      sProcessing: "Procesando...",
+      sLengthMenu: "Mostrar _MENU_ registros",
+      sZeroRecords: "No se encontraron resultados",
+      sEmptyTable: "Ningún dato disponible en esta tabla",
+      sInfo: "Mostrando registros del _START_ al _END_ de un total de _TOTAL_",
+      sInfoEmpty: "Mostrando registros del 0 al 0 de un total de 0",
+      sInfoFiltered: "(filtrado de un total de _MAX_ registros)",
+      sInfoPostFix: "",
+      sSearch: "Buscar:",
+      sUrl: "",
+      sInfoThousands: ",",
+      sLoadingRecords: "No existen datos",
+      oPaginate: {
+        sFirst: "Primero",
+        sLast: "Último",
+        sNext: "Siguiente",
+        sPrevious: "Anterior",
+      },
+      oAria: {
+        sSortAscending:
+          ": Activar para ordenar la columna de manera ascendente",
+        sSortDescending:
+          ": Activar para ordenar la columna de manera descendente",
+      },
+    },
+    dom: "Bfrtip",
+    buttons: ["excel"],
+    columnDefs: columnDefs,
+    bLengthChange: false,
+    pagingType: "full_numbers",
+    Paginate: true,
+    pagingType: "full_numbers",
+    retrieve: true,
+    paging: false,
+    pageLength: false,
+  });
+
+  return table;
+}
+
     var selectorExcel__poa__inicial=function(selector,contenedorExcel,contedorManual){
 
         $(selector).change(function(e){
@@ -79,20 +123,110 @@
                         
                             var cuerpo = document.getElementById('contenedorTabla__'+idActividad);
 
-                            cuerpo.insertAdjacentHTML('beforeend','<div><centre><table><thead><tr id="theadTabla"></tr></thead><tbody id="tbody'+idActividad+'"+></tbody></table></centre></div>');
+                            cuerpo.insertAdjacentHTML('beforeend','<div class="table-responsive"><centre><table id="matriz_Actividad_'+idActividad+'"><thead><tr id="theadTabla"></tr></thead></table></centre></div>');
                           
                             var cuerpo1 = document.getElementById("theadTabla");
-                            for(let i=0;i<titulosArray.length;i++){
-                              cuerpo1.insertAdjacentHTML('beforeend','<th><center>'+titulosArray[i]+'</center></th>');
+                            for (let i = 0; i < titulosArray.length; i++) {
+                              cuerpo1.insertAdjacentHTML(
+                                "beforeend",
+                                "<th><center>" +
+                                  titulosArray[i] +
+                                  "</center></th>"
+                              );
+                            //   table.row
+                            //     .add([
+                            //       // '<th><center>'+titulosArray[i]+'</center></th>',
+                            //       // "<div>"+x.nombreItemOrigen+"</div>",
+                            //       // "<div>"+x.actividadDestino+"</div>",
+                            //       // "<div>"+x.nombreItemDestino+"</div>",
+                            //       // '<button class="delete__cargador" style="padding:.5em;background:red;color:white; width:100%;" id="eliminar'+x.idBloqueo+'" name="eliminar'+x.idBloqueo+'" idContador="'+x.idBloqueo+'"><i class="fa fa-trash" aria-hidden="true"></i></button>'
+                            //     ])
+                            //     .draw(false);
                             }
 
+                            var table = datatabletsConfiguration($("#matriz_Actividad_"+idActividad),false);
+
+                            console.log(table);
 
 
                             for (let i =0; i<item__array.length; i++) {
 
-                                $("#tbody"+idActividad).append('<tr><td><center>'+item__array[i]+'</center></td> <td><center><a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contrataciones__variables" id="tipoContratacion__Guardar">Contratación</a></center></td> <td><center>'+justificacion__array[i]+'</center></td><td><center>'+cantidad__array[i]+'</center></td><td><center>'+enero__array[i]+'</center></td><td><center>'+febrero__array[i]+'</center></td><td><center>'+marzo__array[i]+'</center></td><td><center>'+abril__array[i]+'</center></td><td><center>'+mayo__array[i]+'</center></td><td><center>'+junio__array[i]+'</center></td><td><center>'+julio__array[i]+'</center></td><td><center>'+agosto__array[i]+'</center></td><td><center>'+septiembre__array[i]+'</center></td><td><center>'+octubre__array[i]+'</center></td><td><center>'+noviembre__array[i]+'</center></td><td><center>'+diciembre__array[i]+'</center></td><td><center>'+total__array[i]+'</center></td></tr>');
+                                // $("#tbody"+idActividad).append('<tr><td><center>'+item__array[i]+'</center></td> <td><center><a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contrataciones__variables" id="tipoContratacion__Guardar">Contratación</a></center></td> <td><center>'+justificacion__array[i]+'</center></td><td><center>'+cantidad__array[i]+'</center></td><td><center>'+enero__array[i]+'</center></td><td><center>'+febrero__array[i]+'</center></td><td><center>'+marzo__array[i]+'</center></td><td><center>'+abril__array[i]+'</center></td><td><center>'+mayo__array[i]+'</center></td><td><center>'+junio__array[i]+'</center></td><td><center>'+julio__array[i]+'</center></td><td><center>'+agosto__array[i]+'</center></td><td><center>'+septiembre__array[i]+'</center></td><td><center>'+octubre__array[i]+'</center></td><td><center>'+noviembre__array[i]+'</center></td><td><center>'+diciembre__array[i]+'</center></td><td><center>'+total__array[i]+'</center></td></tr>');
+
+                                table.row.add([
+                        
+                                    // "<div>"+x.nombreItemOrigen+"</div>",
+                                    // "<div>"+x.actividadDestino+"</div>",
+                                    // "<div>"+x.nombreItemDestino+"</div>",
+                                    // '<button class="delete__cargador" style="padding:.5em;background:red;color:white; width:100%;" id="eliminar'+x.idBloqueo+'" name="eliminar'+x.idBloqueo+'" idContador="'+x.idBloqueo+'"><i class="fa fa-trash" aria-hidden="true"></i></button>'
+
+                                    item__array[i],
+                                    '<td><center><a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contrataciones__variables" id="tipoContratacion__Guardar">Contratación</a></center></td>',
+                                    justificacion__array[i],
+                                    cantidad__array[i],
+                                    enero__array[i],
+                                    febrero__array[i],
+                                    marzo__array[i],
+                                    abril__array[i],
+                                    mayo__array[i],
+                                    junio__array[i],
+                                    julio__array[i],
+                                    agosto__array[i],
+                                    septiembre__array[i],
+                                    octubre__array[i],
+                                    noviembre__array[i],
+                                    diciembre__array[i],
+                                    total__array[i],
+                       
+                               ]).draw(false);
                                 
                             }
+
+                            
+
+                            // for(x of informacionObtenida){
+
+                            //     table.row.add([
+                        
+                            //          "<div>"+x.actividadOrigen+"</div>",
+                            //          "<div>"+x.nombreItemOrigen+"</div>",
+                            //          "<div>"+x.actividadDestino+"</div>",
+                            //          "<div>"+x.nombreItemDestino+"</div>",
+                            //          '<button class="delete__cargador" style="padding:.5em;background:red;color:white; width:100%;" id="eliminar'+x.idBloqueo+'" name="eliminar'+x.idBloqueo+'" idContador="'+x.idBloqueo+'"><i class="fa fa-trash" aria-hidden="true"></i></button>'
+                        
+                            //     ]).draw(false);
+                                                
+                            //     $('.delete__cargador').on('click',function(){
+                        
+                            //         var tablename = $(this).closest('table').DataTable();  
+                            //         tablename.row($(this).parents('tr')).remove().draw();
+                        
+                            //         let paqueteDeDatos2 = new FormData();
+                            //         let idEnvio=$(this).attr('idContador');
+                            //         paqueteDeDatos2.append("tipo","eliminar__modificacion__linea__adminsitradores");
+                            //         paqueteDeDatos2.append("idEnvio",idEnvio);
+                            //         $.ajax({
+                            //             type:"POST",
+                            //             url:"modelosBd/inserta/eliminaAcciones.md.php",
+                            //             contentType: false,
+                            //             data:paqueteDeDatos2,
+                            //             processData: false,
+                            //             cache: false, 
+                            //             success:function(response){
+                            //                 $.getScript("layout/scripts/js/modificacion/modificacionGlobal.js",function(){
+                            //                     alertify.set("notifier","position", "top-center");
+                            //                     alertify.notify("Eliminación realizada correctamente", "success", 5, function(){});
+                            //                 });	
+                        
+                            //             },
+                            //             error:function(){
+                            //             }
+                            //         });	
+                        
+                            //     });
+                        
+                        
+                            // }
 
                             cuerpo.insertAdjacentHTML('beforeend','<div><center><a class="btn btn-success">Enviar</a></center></div>');
                            
