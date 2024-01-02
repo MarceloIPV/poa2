@@ -204,7 +204,7 @@
 
 
 
-    var construccion__modal__excel=function(boton,titulosArray,tipo){
+    var construccion__modal__excel=function(boton,titulosArray,tipo,documento){
 
         $(boton).click(function(e){
 
@@ -219,7 +219,7 @@
        
             if (tipo=="act__administrativas") {
 
-                $("#formatoDescarga__"+idActividad).attr("href","documentos/POAINICIAL_MATRICES/MATRIZ1.xlsx")
+                $("#formatoDescarga__"+idActividad).attr("href",documento)
                 
             }
 

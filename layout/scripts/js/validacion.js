@@ -22,12 +22,6 @@ var selector__index__principal=function(parametro1,parametro2){
 
 	}
 
-		let $option = $('<option />', {
-		    text: 2024,
-		    value: 2024,
-		});
-
-		$(parametro2).append($option);	
 
 }
 
