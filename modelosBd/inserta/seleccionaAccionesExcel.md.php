@@ -990,10 +990,56 @@
 
 		for ($row = 2; $row <= $highestRow; $row++){ 
 
-			if (4>5) {
+			if ($sheet->getCell("A".$row)->getValue()=="" || $sheet->getCell("B".$row)->getValue()=="") {
 
 				$banderaObligatorios=true;
-	
+
+				if (empty($sheet->getCell("A".$row)->getValue())) {
+					array_push($obligatorios__exceles,"Columna A Fila ".$row." está vacía");
+				}
+				if (empty($sheet->getCell("B".$row)->getValue())) {
+					array_push($obligatorios__exceles,"Columna B Fila ".$row." está vacía");
+				}
+				if (empty($sheet->getCell("C".$row)->getValue())) {
+					array_push($obligatorios__exceles,"Columna C Fila ".$row." está vacía");
+				}	
+				if (empty($sheet->getCell("D".$row)->getValue())) {
+					array_push($obligatorios__exceles,"Columna D Fila ".$row." está vacía");
+				}	
+				if (empty($sheet->getCell("E".$row)->getValue())) {
+					array_push($obligatorios__exceles,"Columna E Fila ".$row." está vacía");
+				}	
+				if (empty($sheet->getCell("F".$row)->getValue())) {
+					array_push($obligatorios__exceles,"Columna F Fila ".$row." está vacía");
+				}	
+				if (empty($sheet->getCell("G".$row)->getValue())) {
+					array_push($obligatorios__exceles,"Columna G Fila ".$row." está vacía");
+				}	
+				if (empty($sheet->getCell("H".$row)->getValue())) {
+					array_push($obligatorios__exceles,"Columna H Fila ".$row." está vacía");
+				}	
+				if (empty($sheet->getCell("I".$row)->getValue())) {
+					array_push($obligatorios__exceles,"Columna I Fila ".$row." está vacía");
+				}	
+				if (empty($sheet->getCell("J".$row)->getValue())) {
+					array_push($obligatorios__exceles,"Columna J Fila ".$row." está vacía");
+				}	
+				if (empty($sheet->getCell("K".$row)->getValue())) {
+					array_push($obligatorios__exceles,"Columna K Fila ".$row." está vacía");
+				}
+				if (empty($sheet->getCell("L".$row)->getValue())) {
+					array_push($obligatorios__exceles,"Columna L Fila ".$row." está vacía");
+				}
+				if (empty($sheet->getCell("M".$row)->getValue())) {
+					array_push($obligatorios__exceles,"Columna M Fila ".$row." está vacía");
+				}
+				if (empty($sheet->getCell("N".$row)->getValue())) {
+					array_push($obligatorios__exceles,"Columna N Fila ".$row." está vacía");
+				}
+				if (empty($sheet->getCell("O".$row)->getValue())) {
+					array_push($obligatorios__exceles,"Columna O Fila ".$row." está vacía");
+				}
+
 				$obligatorios__fallas = implode(" ; ", $obligatorios__exceles);
 
 				$jason['obligatorios__falla']=$obligatorios__fallas;
@@ -1002,7 +1048,7 @@
 
 				if ($sheet->getCell("A".$row)->getValue()) {
 
-					if (strpos($sheet->getCell("A".$row)->getValue(),'ADMINISTRATIVA')!==false) {
+					if (strpos($sheet->getCell("A".$row)->getValue(),'ADMINISTRATIVA')!==false || strpos($sheet->getCell("A".$row)->getValue(),'FUNCIONAMIENTO')!==false) {
 						$valorActividad=1;
 					}else if(strpos($sheet->getCell("A".$row)->getValue(),'MANTENIMIENTO')!==false) {
 						$valorActividad=2;

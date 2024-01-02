@@ -1135,9 +1135,13 @@ sumarSueldosModificaciones($("#diciembre__origen__salarios__ingresar"),$("#dicie
 
 						$(parametro2).append('<div style="overflow: scroll!important; width:100%;"><table class="tabla__especificas" style="width:100%!important;"><table class="tabla__especificas"><thead><tr><th>Actividad</th><th>Ítem</th><th>Enero</th><th>Febrero</th><th>Marzo</th><th>Abril</th><th>Mayo</th><th>Junio</th><th>Julio</th><th>Agosto</th><th>Septiembre</th><th>Octubre</th><th>Noviembre</th><th>Diciembre</th><th>Total</th></tr></thead><tbody class="cuerpo__tablas"></tbody></table></div>');
 
+						let contador=0;
+
 						for (z of indicadorInformacion) {
 
-							$(".cuerpo__tablas").append('<tr class="fila__'+z.idProgramacionFinanciera+'"><td>'+z.nombreActividad+'</td><td>'+z.nombreItem+'</td><td>'+z.enero+'</td><td>'+z.febrero+'</td><td>'+z.marzo+'</td><td>'+z.abril+'</td><td>'+z.mayo+'</td><td>'+z.junio+'</td><td>'+z.julio+'</td><td>'+z.agosto+'</td><td>'+z.septiembre+'</td><td>'+z.octubre+'</td><td>'+z.noviembre+'</td><td>'+z.diciembre+'</td><td>'+z.totalTotales+'</td></tr>');
+							contador++;
+
+							$(".cuerpo__tablas").append('<tr class="fila__'+z.idProgramacionFinanciera+'"><td>'+contador+".- "+z.nombreActividad+'</td><td>'+z.nombreItem+'</td><td>'+z.enero+'</td><td>'+z.febrero+'</td><td>'+z.marzo+'</td><td>'+z.abril+'</td><td>'+z.mayo+'</td><td>'+z.junio+'</td><td>'+z.julio+'</td><td>'+z.agosto+'</td><td>'+z.septiembre+'</td><td>'+z.octubre+'</td><td>'+z.noviembre+'</td><td>'+z.diciembre+'</td><td>'+z.totalTotales+'</td></tr>');
 
 						}						
 
