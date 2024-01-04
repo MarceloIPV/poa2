@@ -1770,7 +1770,7 @@ var segmentosJsAjax=function(parametro1,parametro2){
 
 										selectorExcel__poa__inicial($("#select__actAdm"+idActividades),$(".cargarExcel__actAdm"),$(".cargaManual__actAdm"));
 
-										construccion__modal__excel($("#enlaceMatriz__excel"+idActividades),["ITEM PRESUPUESTARIO (CODIGO)",	"Tipo de Contratación (Campo obligatorio para ingresar la información)",	"Justificación de la adquisición del bien o servicio",	"Cantidad del bien o servicio a adquirir",	"ENERO",	"FEBRERO",	"MARZO",	"ABRIL",	"MAYO",	"JUNIO",	"JULIO",	"AGOSTO",	"SEPTIEMBRE",	"OCTUBRE",	"NOVIEMBRE",	"DICIEMBRE",	"TOTAL Programación Financiera"],"act__administrativas");
+										construccion__modal__excel($("#enlaceMatriz__excel"+idActividades),["ITEM PRESUPUESTARIO (CODIGO)",	"Justificación de la adquisición del bien o servicio",	"Cantidad del bien o servicio a adquirir"],"act__administrativas","documentos/POAINICIAL_MATRICES/MATRIZ1.xlsx",true,["item__array","justificacion__array","cantidad__array"],1);
 
 									});
 
@@ -1848,7 +1848,7 @@ var segmentosJsAjax=function(parametro1,parametro2){
 
 										selectorExcel__poa__inicial($("#select__actAdm"+idActividades),$(".cargarExcel__actAdm"),$(".cargaManual__actAdm"));
 
-										construccion__modal__excel($("#enlaceMatrizSuministro__excel"+idActividades),["ITEM PRESUPUESTARIO (CODIGO)", "Tipo de Contratación (Campo obligatorio para ingresar la información)", "TIPO", "Nombre del escenario deportivo o Residencia para Fomento Deportivo",	"Suministro Energía","Suministro Agua"],"suminis__administrativas");
+										construccion__modal__excel($("#enlaceMatrizSuministro__excel"+idActividades),["TIPO", "Nombre del escenario deportivo o Residencia para Fomento Deportivo",	"Suministro Energía","Suministro Agua"],"suminis__administrativas","documentos/POAINICIAL_MATRICES/MATRIZ1SUMINISTROS.xlsx",false,["tipo__array","nombre__array","luz__array","agua__array"],2);
 
 									});
 
@@ -1943,7 +1943,7 @@ var segmentosJsAjax=function(parametro1,parametro2){
 
 										selectorExcel__poa__inicial($("#select__actAdm"+idActividades),$(".cargarExcel__actAdm"),$(".cargaManual__actAdm"));
 
-										construccion__modal__excel($("#enlaceMatriz__excel"+idActividades),["Item","Tipo de contratación","Nombre Ítem","Nombre infraestructura","Provincia","Dirección","Estado","Tipo recursos","Tipo inversión","Detalle inversión","Tipo Mantenimiento","Materiales servicios <br> a <br> requerir para el <br> mantenimiento","Fecha último <br> mantenimiento <br> realizado","Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre","Total"],"mantenimiento");
+										construccion__modal__excel($("#enlaceMatriz__excel"+idActividades),["Item","Tipo de contratación","Nombre Ítem","Nombre infraestructura","Provincia","Dirección","Estado","Tipo recursos","Tipo inversión","Detalle inversión","Tipo Mantenimiento","Materiales servicios <br> a <br> requerir para el <br> mantenimiento","Fecha último <br> mantenimiento <br> realizado","Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre","Total"],"mantenimiento","documentos/POAINICIAL_MATRICES/MATRIZ_ACTIVIDAD_002.xlsx");
 
 									});
 
