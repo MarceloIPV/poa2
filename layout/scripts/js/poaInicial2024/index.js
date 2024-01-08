@@ -2,6 +2,8 @@
 
 
 function datatabletsConfiguration(tabla, columnDefs) {
+
+    $(tabla).DataTable().destroy();
   var table = $(tabla).DataTable({
     language: {
       sProcessing: "Procesando...",
@@ -67,6 +69,7 @@ function datatabletsConfiguration(tabla, columnDefs) {
 
         $(boton).click(function(e){
 
+            
             let idActividad=$(this).attr("idActividad");
 
             var paqueteDeDatos = new FormData();
@@ -100,48 +103,61 @@ function datatabletsConfiguration(tabla, columnDefs) {
                     let array__errorCampoNoCorresponde = array__errorCampoNoCorresponde__string.split(";").filter(Boolean);
                     
                     
-                    if(array__errorCampoNoCorresponde.length >0){
+                    if(array__errorCampoNoCorresponde.length >0 || array__camposVacios.length >0 || array__errorItemRepetido.length >0 || array_errorItem.length >0){
+
+                        alertify.set("notifier","position", "top-center");
+                        alertify.notify("Error de carga de información ver la tabla de errores a continuación", "error", 5, function(){});
+
+                        let aux=0;
+
+                        $("#contenedorTabla__"+idActividad).html(" ");
+
+                        $("#contenedorTabla__"+idActividad).append('<div class="table-responsive"><center><table id="tableErrores__'+idActividad+'"><thead><tr><th colspan="2"><center>No se puede cargar la información por los siguientes errores:</center></th></tr></thead><tbody id="bodyErrores__'+idActividad+'"></tbody></table></center></div>');
 
                         for(let i = 0; i < array__errorCampoNoCorresponde.length; i++){
 
-                            alertify.set("notifier","position","top-center");
-                            alertify.notify(array__errorCampoNoCorresponde[i],"error",6,function(){});
+                            aux++;
+
+                            $("#bodyErrores__"+idActividad).append("<tr><td>"+aux+"</td><td>"+array__errorCampoNoCorresponde[i]+"</td></tr>");
+
                         }
-
-                        $("#contenedorTabla__"+idActividad).html(" ");
-
-                    }else if(array__camposVacios.length >0){
 
                         for(let i = 0; i < array__camposVacios.length; i++){
 
-                            alertify.set("notifier","position","top-center");
-                            alertify.notify(array__camposVacios[i],"error",6,function(){});
+                            aux++;
+
+                            $("#bodyErrores__"+idActividad).append("<tr><td>"+aux+"</td><td>"+array__camposVacios[i]+"</td></tr>");
+  
                         }
-
-                        $("#contenedorTabla__"+idActividad).html(" ");
-
-                    }else if(array__errorItemRepetido.length >0){
 
                         for(let i = 0; i < array__errorItemRepetido.length; i++){
 
-                            alertify.set("notifier","position","top-center");
-                            alertify.notify(array__errorItemRepetido[i],"error",6,function(){});
+                            aux++;
+
+                            $("#bodyErrores__"+idActividad).append("<tr><td>"+aux+"</td><td>"+array__errorItemRepetido[i]+"</td></tr>");
+
                         }
 
-                        $("#contenedorTabla__"+idActividad).html(" ");
-
-                    }else if(array_errorItem.length >0){
 
                         for(let i = 0; i < array_errorItem.length; i++){
-                            alertify.set("notifier","position","top-center");
-                            alertify.notify(array_errorItem[i],"error",6,function(){});
-                        }
 
-                        $("#contenedorTabla__"+idActividad).html(" ");
+                            aux++;
+
+                            $("#bodyErrores__"+idActividad).append("<tr><td>"+aux+"</td><td>"+array_errorItem[i]+"</td></tr>");
+
+                        }
 
                     }else{
 
+                        
                         $("#contenedorTabla__"+idActividad).html(" ");
+
+                         if(tipo == "sueldos__salarios"){
+
+                            $("#contenedorTabla__"+idActividad).append('<div class="col col-12 d-flex mt-4"><div class="col col-6"><center><strong>Seleccione un Régimen</strong></center></div><div class="col col-6"><center><select class="form-control" id="select__Regimen'+idActividad+'"><option value="0">--Seleccione--</option><option value="Costa">Costa</option><option value="Sierra">Sierra</option><option value="Amazonia">Amazonia</option></select></center></div></div>');
+
+                            guardar__Regimen($("#select__Regimen"+idActividad));
+                        }
 
                         $("#contenedorTabla__"+idActividad).append('<div class="table-responsive"><centre><table id="matriz_Actividad_'+idActividad+'"><thead><tr id="theadTabla"></tr></thead><tbody id="body__'+idActividad+'"></tbody></table></centre></div>');
 
@@ -151,8 +167,12 @@ function datatabletsConfiguration(tabla, columnDefs) {
                         
                         
                         if (boleano==true) {
-                            bodyArray.push("enero__array","febrero__array","marzo__array","abril__array","mayo__array","junio__array","julio__array","agosto__array","septiembre__array","octubre__array","noviembre__array","diciembre__array","total__array");
-                            titulosArray.push("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre","Total");
+
+                            if(bodyArray.indexOf("enero__array") === -1){
+                                bodyArray.push("enero__array","febrero__array","marzo__array","abril__array","mayo__array","junio__array","julio__array","agosto__array","septiembre__array","octubre__array","noviembre__array","diciembre__array","total__array");
+                                titulosArray.push("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre","Total");
+                            }
+                            
                         }
 
                         
@@ -189,7 +209,6 @@ function datatabletsConfiguration(tabla, columnDefs) {
                         =            Generar filas            =
                         =====================================*/
                         
-                        
                         let contadorM=array[0].length;
 
                         let auxIncremental=0;
@@ -220,9 +239,11 @@ function datatabletsConfiguration(tabla, columnDefs) {
                         
                         var table = datatabletsConfiguration($("#matriz_Actividad_"+idActividad),false);
 
+                        
+
                         for (var i = 0; i <  arrayFilas.length; i++) {
-                           
-                            var filaData=[];
+
+                            var filaData=new Array();
 
                             for (var z = 0; z <  arrayFilas[i].length; z++) {
 
@@ -230,13 +251,38 @@ function datatabletsConfiguration(tabla, columnDefs) {
 
                             }
 
-
                             table.row.add(filaData);
-
 
                         }
 
                         table.draw();
+
+                        let numeroArray = array[0].length;
+
+                        if(numeroArray > 0){
+                            $("#contenedorTabla__"+idActividad).append('<div class="col col-12 mt-4"><center><a class="btn btn-success" id="guardarMatriz__'+idActividad+'">Guardar</a></center></div>');
+                        }else if(numeroArray == 0){
+                            alertify.set("notifier","position","top-center");
+                            alertify.notify("No existen datos en el Archivo","error",6,function(){});
+                        }
+
+
+                        var arrayAct = ['id__deporte__array','id__provincia__array','id__pais__array','id__alcanse__array'];
+
+                        if(tipo == "act__deportivas"){
+                            for (var i = 0; i <  arrayAct.length; i++) {
+                                var elemento=elementos[arrayAct[i]];
+                                array.push(elemento);
+                            }
+                        }
+
+                        if(tipo == "mantenimiento"){
+
+                            var elemento=elementos['id__provincia__array'];
+                            array.push(elemento);
+                        }
+                        
+                        guardar__Matrices($("#guardarMatriz__"+idActividad),array,idActividad,tipo);
 
                         
                         /*=====  End of Construcción datatablets  ======*/
@@ -257,17 +303,17 @@ function datatabletsConfiguration(tabla, columnDefs) {
 
 
 
-    var construccion__modal__excel=function(boton,titulosArray,tipo,documento,boleano,bodyArray,accionesMatriz){
+    var construccion__modal__excel=function(boton,titulosArray,tipo,documento,boleano,bodyArray,accionesMatriz,tituloModal){
 
         $(boton).click(function(e){
 
             let idActividad=$(this).attr("idActividad");
 
-            $("#idTituloModalContratacion").text('Carga de Archivo Excel');
-
             $("#divcontratcionActividades").html(" ");
 
-            $("#divcontratcionActividades").append("<div class='col col-3'><a class='btn btn-success' id='formatoDescarga__"+idActividad+"' download='formatoMatriz__"+idActividad+"'>Descargar Formato</a></div><div class='col col-3 font-bold'>Subir Archivo</div><input class='col col-3' type='file' id='cargar__archivo__"+idActividad+"' /> <div class='col col-3'><a class='btn btn-primary' id='visualizador__"+idActividad+"' idActividad='"+idActividad+"'>Visualizar</a></div><div class='col col-12' id='contenedorTabla__"+idActividad+"'></div>");
+            $(".modal-title").text("Carga de Archivo Excel "+tituloModal);
+
+            $("#divcontratcionActividades").append("<div class='col col-3'><a class='btn btn-success' id='formatoDescarga__"+idActividad+"' download='formatoMatriz__"+tipo+"'>Descargar Formato "+tituloModal+"</a></div><div class='col col-3 font-bold'>Subir Archivo</div><input class='col col-3' type='file' id='cargar__archivo__"+idActividad+"' /> <div class='col col-3'><a class='btn btn-primary' id='visualizador__"+idActividad+"' idActividad='"+idActividad+"'>Visualizar</a></div><div class='col col-12' id='contenedorTabla__"+idActividad+"'></div>");
 
        
             $("#formatoDescarga__"+idActividad).attr("href",documento);
@@ -277,6 +323,127 @@ function datatabletsConfiguration(tabla, columnDefs) {
 
         });
     
+    }
+
+
+    var guardar__Matrices = function(boton,data,idActividad,tipo){
+
+        $(boton).click(function(e){
+
+            var paqueteDeDatos = new FormData();
+
+            paqueteDeDatos.append('tipo',tipo);
+            paqueteDeDatos.append('idActividad',idActividad);
+            paqueteDeDatos.append('data',JSON.stringify(data));
+
+            alertify.confirm("¿Está seguro de guardar la matriz?", function(result) {
+                if (result) {
+                    
+                    $.ajax({
+
+                        type:"POST",
+                        url:"modelosBd/poaInicial2024/insertaMatriz.md.php",
+                        contentType: false,
+                        data:paqueteDeDatos,
+                        processData: false,
+                        cache: false, 
+                        success:function(response){
+        
+                            let elementos = JSON.parse(response);
+                            let mensaje = elementos['mensaje'];
+        
+                            if (mensaje == 1) {
+    
+                                alertify.set("notifier", "position", "top-center");
+                                alertify.notify("Registro realizado correctamente", "success", 5, function() {});
+
+                                window.setTimeout(function() {
+                                    window.location = "planificacion";
+                                }, 3000);
+        
+                            }else if(mensaje == 2){
+
+                                alertify.set("notifier", "position", "top-center");
+                                alertify.notify("Los montos totales superan el techo asignado", "error", 5, function() {});
+    
+                            }else if(mensaje == 3){
+
+                                alertify.set("notifier", "position", "top-center");
+                                alertify.notify("Los montos superan el monto programado", "error", 5, function() {});
+
+                            }else if(mensaje == 4){
+
+                                alertify.set("notifier", "position", "top-center");
+                                alertify.notify("No se ha encontrado el regimen del organismo", "error", 5, function() {});
+                            }
+                            
+                        },
+                        error:function(){
+        
+                        }
+        
+                    });
+
+
+
+
+                } else {
+
+                    alertify.set("notifier", "position", "top-center");
+                    alertify.notify("Acccion Cancelada", "error", 3, function() {});
+                }
+            });
+
+        });
+    }
+
+
+    var guardar__Regimen = function(select){
+        $(select).change(function (e) { 
+            e.preventDefault();
+
+            let paqueteDeDatos = new FormData();
+
+            let idValor = $(this).val();
+            let idOrganismo = $("#idOrganismoPrincipal").val();
+
+            paqueteDeDatos.append("tipo","regimen");
+            paqueteDeDatos.append("idValor",idValor);
+            paqueteDeDatos.append("idOrganismo",idOrganismo);
+
+            if(idValor == 0){
+                alertify.set("notifier", "position", "top-center");
+                alertify.notify("El régimen no puede ser vacío", "error", 5, function() {});
+            }else{
+                $.ajax({
+
+                    type:"POST",
+                    url:"modelosBd/inserta/insertaAcciones.md.php",
+                    contentType: false,
+                    data:paqueteDeDatos,
+                    processData: false,
+                    cache: false, 
+                    success:function(response){
+    
+                        let elementos=JSON.parse(response);
+                        let mensaje = elementos['mensaje'];
+    
+                        if (mensaje == 1) {
+        
+                            alertify.set("notifier", "position", "top-center");
+                            alertify.notify("Registro actualizado", "success", 3, function() {});
+    
+                        }
+    
+                    },
+                    error:function(){
+    
+                    }
+    
+                });
+            }
+            
+        });
     }
 
 // });

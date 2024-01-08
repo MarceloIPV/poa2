@@ -1770,7 +1770,7 @@ var segmentosJsAjax=function(parametro1,parametro2){
 
 										selectorExcel__poa__inicial($("#select__actAdm"+idActividades),$(".cargarExcel__actAdm"),$(".cargaManual__actAdm"));
 
-										construccion__modal__excel($("#enlaceMatriz__excel"+idActividades),["ITEM PRESUPUESTARIO (CODIGO)",	"Justificación de la adquisición del bien o servicio",	"Cantidad del bien o servicio a adquirir"],"act__administrativas","documentos/POAINICIAL_MATRICES/MATRIZ1.xlsx",true,["item__array","justificacion__array","cantidad__array"],1);
+										construccion__modal__excel($("#enlaceMatriz__excel"+idActividades),["ITEM PRESUPUESTARIO (CODIGO)",	"Justificación de la adquisición del bien o servicio",	"Cantidad del bien o servicio a adquirir"],"act__administrativas","documentos/POAINICIAL_MATRICES/MATRIZ1.xlsx",true,["item__array","justificacion__array","cantidad__array"],1,"MATRIZ ACTIVIDADES ADMINISTATIVAS");
 
 									});
 
@@ -1794,7 +1794,26 @@ var segmentosJsAjax=function(parametro1,parametro2){
 
 				            		var arrayMatriz = arrayGrupo51;
 
-				            		$(".fila__actividad1"+idActividades).append('<br><div class="row d d-flex justify-content-center;"><a class="col-12" style="color:white; cursor:pointer; text-transform:uppercase;" attr="'+arrayMatriz+'" idOrganismo="'+$("#organismoIdPrin").val()+'" idActividad="'+idActividades+'" data-bs-toggle="modal" data-bs-target="#modalMatriz'+idActividades+'" id="enlaceMatriz__SueldosSalarios'+idActividades+'">SUELDOS Y SALARIOS</a></div>');
+									$.getScript("layout/scripts/js/poaInicial2024/index.js",function(){
+
+										$(".fila__actividad1"+idActividades).append('<br><div class="row d d-flex justify-content-center;"><select class="form-select" id="select__sueldosSalarios'+idActividades+'"><option value="0">--Seleccione una opcion para ingresar información de sueldos y salarios--</option><option value="manual">Manual</option><option value="excel">Excel</option></select></div>');
+
+										$(".fila__actividad1"+idActividades).append('<br><div class="cargaManual__sueldosSalarios"><a class="col-12" style="color:white; cursor:pointer; text-transform:uppercase;" attr="'+arrayMatriz+'" idOrganismo="'+$("#organismoIdPrin").val()+'" idActividad="'+idActividades+'" data-bs-toggle="modal" data-bs-target="#modalMatriz'+idActividades+'" id="enlaceMatriz__SueldosSalarios'+idActividades+'">SUELDOS Y SALARIOS(Carga Manual)</a></div>');
+
+
+										$(".fila__actividad1"+idActividades).append('<br><div class="cargaExcel__sueldosSalarios"><a class="col-12" style="color:white; cursor:pointer; text-transform:uppercase;" attr="'+arrayMatriz+'" idOrganismo="'+$("#organismoIdPrin").val()+'" idActividad="'+idActividades+'" data-bs-toggle="modal" data-bs-target="#subirArchivoExcelPOA" id="enlaceMatriz__excel'+idActividades+'">SUELDOS Y SALARIOS(Carga Excel)</a></div>');
+
+								
+
+										$(".cargaManual__sueldosSalarios").hide();
+										$(".cargaExcel__sueldosSalarios").hide();
+
+
+										selectorExcel__poa__inicial($("#select__sueldosSalarios"+idActividades),$(".cargaExcel__sueldosSalarios"),$(".cargaManual__sueldosSalarios"));
+
+										construccion__modal__excel($("#enlaceMatriz__excel"+idActividades),["NO. CÉDULA / PASAPORTE","APELLIDOS Y NOMBRES","CARGO","TIPO DE CARGO","TIEMPO DE TRABAJO (EN MESES)","SUELDO SALARIOMENSUAL","APORTE PATRONAL AL IESS MENSUAL","DECIMO TERCERA REMUNERACION","MENSUALIZA DECIMO TERCERA REMUNERACION","DECIMO CUARTA REMUNERACION","MENZUALIZA DECIMO CUARTA REMUNERACION","FONDOS DE RESERVA"],"sueldos__salarios","documentos/POAINICIAL_MATRICES/SUELDOS__SALARARIOS.xlsx",true,["cedula__array","apellidos__array","cargo__array","tipoCargo__array","tiempoTrabajo__array","sueldos__array","aporte__array","decimoTercero__array","mensualizaDecimoTercero__array","decimoCuarto__array","mensualizaDecimoCuarta__array","fondosDeReserva__array"],7,"MATRIZ SUELDOS Y SALARIOS");
+
+									});
 
 				            		/*================================================================
 				            		=            Añadir valores a modal y construir tabla            =
@@ -1816,7 +1835,27 @@ var segmentosJsAjax=function(parametro1,parametro2){
 
 				            		var arrayMatriz = arrayGrupoHonorarios;
 
-				            		$(".fila__actividad1"+idActividades).append('<br><div class="row d d-flex justify-content-center;"><a class="col-12" style="color:white; cursor:pointer; text-transform:uppercase;" attr="'+arrayMatriz+'" idOrganismo="'+$("#organismoIdPrin").val()+'" idActividad="'+idActividades+'" data-bs-toggle="modal" data-bs-target="#modalMatriz'+idActividades+'" id="enlaceMatriz__honorarios'+idActividades+'">HONORARIOS</a></div>');
+									$.getScript("layout/scripts/js/poaInicial2024/index.js",function(){
+
+										$(".fila__actividad1"+idActividades).append('<br><div class="row d d-flex justify-content-center;"><select class="form-select" id="select__honorarios'+idActividades+'"><option value="0">--Seleccione una opcion correspondiente a la mátriz de honorarios--</option><option value="manual">Manual</option><option value="excel">Excel</option></select></div>');
+
+										$(".fila__actividad1"+idActividades).append('<br><div class="cargaManual__honorarios"><a class="col-12" style="color:white; cursor:pointer; text-transform:uppercase;" attr="'+arrayMatriz+'" idOrganismo="'+$("#organismoIdPrin").val()+'" idActividad="'+idActividades+'" data-bs-toggle="modal" data-bs-target="#modalMatriz'+idActividades+'" id="enlaceMatriz__honorarios'+idActividades+'">HONORARIOS (Carga Manual)</a></div>');
+
+										$(".fila__actividad1"+idActividades).append('<br><div class="cargaExcel__honorarios"><a class="col-12" style="color:white; cursor:pointer; text-transform:uppercase;" attr="'+arrayMatriz+'" idOrganismo="'+$("#organismoIdPrin").val()+'" idActividad="'+idActividades+'" data-bs-toggle="modal" data-bs-target="#subirArchivoExcelPOA" id="enlaceMatriz__excel'+idActividades+arrayGrupoHonorarios[0]+'">HONORARIOS (Carga Excel)</a></div>');
+
+
+
+										$(".cargaManual__honorarios").hide();
+										$(".cargaExcel__honorarios").hide();
+
+
+										selectorExcel__poa__inicial($("#select__honorarios"+idActividades),$(".cargaExcel__honorarios"),$(".cargaManual__honorarios"));
+
+										construccion__modal__excel($("#enlaceMatriz__excel"+idActividades+arrayGrupoHonorarios[0]),["NO. CÉDULA / PASAPORTE","APELLIDOS Y NOMBRES",	"CARGO", "TIPO DE CARGO","HONORARIO MENSUAL (INCLUIDO IVA)"],"honorarios","documentos/POAINICIAL_MATRICES/HONORARIOS.xlsx",true,["cedula__array","nombres__array","cargo__array","tipoCargo__array","honorarioMensual__array"],8,"MATRIZ HONORARIOS");
+
+									});
+
+				            		
 
 				            		/*================================================================
 				            		=            Añadir valores a modal y construir tabla            =
@@ -1848,7 +1887,7 @@ var segmentosJsAjax=function(parametro1,parametro2){
 
 										selectorExcel__poa__inicial($("#select__actAdm"+idActividades),$(".cargarExcel__actAdm"),$(".cargaManual__actAdm"));
 
-										construccion__modal__excel($("#enlaceMatrizSuministro__excel"+idActividades),["TIPO", "Nombre del escenario deportivo o Residencia para Fomento Deportivo",	"Suministro Energía","Suministro Agua"],"suminis__administrativas","documentos/POAINICIAL_MATRICES/MATRIZ1SUMINISTROS.xlsx",false,["tipo__array","nombre__array","luz__array","agua__array"],2);
+										construccion__modal__excel($("#enlaceMatrizSuministro__excel"+idActividades),["TIPO", "Nombre del escenario deportivo o Residencia para Fomento Deportivo",	"Suministro Energía","Suministro Agua"],"suminis__administrativas","documentos/POAINICIAL_MATRICES/MATRIZ1SUMINISTROS.xlsx",false,["tipo__array","nombre__array","luz__array","agua__array"],2,"MATRIZ SUMINISTROS");
 
 									});
 
@@ -1888,7 +1927,30 @@ var segmentosJsAjax=function(parametro1,parametro2){
 
 				            	if (idActividades==3 || idActividades==5 || idActividades==6 || idActividades==7) {
 
-				            		$(".fila__ac"+idActividades).append('<td class="act3__'+idActividades+'"><center><div class="row d d-flex justify-content-center;"><a class="col-12" style="color:white; cursor:pointer; text-transform:uppercase;" attr="'+array3+'" idOrganismo="'+$("#organismoIdPrin").val()+'" idActividad="'+idActividades+'" data-bs-toggle="modal" data-bs-target="#modalMatriz'+idActividades+'" id="enlaceMatriz'+idActividades+'">Actividades Deportivas</a></div></center></td>');
+
+
+									$.getScript("layout/scripts/js/poaInicial2024/index.js",function(){
+
+										$(".fila__ac"+idActividades).append('<br><div class="row d d-flex justify-content-center;"><select class="form-select" id="select__actDeportivas'+idActividades+'"><option value="0">--Seleccione una opcion--</option><option value="manual">Manual</option><option value="excel">Excel</option></select></div>');
+
+
+										$(".fila__ac"+idActividades).append('<div class="act3__'+idActividades+' cargaManual__actDeportiva"><center><div class="row d d-flex justify-content-center;"><a class="col-12" style="color:white; cursor:pointer; text-transform:uppercase;" attr="'+array3+'" idOrganismo="'+$("#organismoIdPrin").val()+'" idActividad="'+idActividades+'" data-bs-toggle="modal" data-bs-target="#modalMatriz'+idActividades+'" id="enlaceMatriz'+idActividades+'">Actividades Deportivas (Carga Manual)</a></div></center></div>');
+
+										$(".fila__ac"+idActividades).append('<div class="act3__'+idActividades+' cargarExcel__actDeportiva"><center><div class="row d d-flex justify-content-center;"><a class="col-12" style="color:white; cursor:pointer; text-transform:uppercase;" attr="'+arrayMatriz+'" idOrganismo="'+$("#organismoIdPrin").val()+'" idActividad="'+idActividades+'" data-bs-toggle="modal" data-bs-target="#subirArchivoExcelPOA" id="enlaceMatriz__excel'+idActividades+'">Actividades Deportivas (Carga Excel)</a></div></center></div>');
+
+								
+
+										$(".cargaManual__actDeportiva").hide();
+										$(".cargarExcel__actDeportiva").hide();
+
+
+										selectorExcel__poa__inicial($("#select__actDeportivas"+idActividades),$(".cargarExcel__actDeportiva"),$(".cargaManual__actDeportiva"));
+
+										construccion__modal__excel($("#enlaceMatriz__excel"+idActividades),["CÓDIGO ÍTEM","EVENTO","TIPO FINANCIMIENTO","DEPORTE","PROVINCIA","PAIS","ALCANCE","FECHA INICIO","FECHA FIN","GENERO","CATEGORIA","NUMERO ENTRENADORES","NUMERO ATLETAS","TOTAL","MUJERES (BENEFICIARIOS)","HOMBRES (BENEFICIARIOS)","CANTIDAD DEL BIEN O SERVICIO A ADQUIRIR","DETALLE LO QUE EL ORGANISMO VA A ADQUIRIR","JUSTIFICACION DE LA ADQUISICION DEL BIEN O SERVICIO"],"act__deportivas","documentos/POAINICIAL_MATRICES/ACTIVIDADESDEPORTIVAS.xlsx",true,["Item__array","evento__array","tipoFinanciamiento__array","deporte__array","provincia__array","pais__array","alcanse__array","fechaInicio__array","fechaFin__array","genero__array","categoria__array","numeroEntrenadores__array","numeroAtletas__array","totalEntrenadoresAtletas__array","mujeresB__array","hombresB__array","cantidad__array","detalle__array","justificacion__array"],4,"MATRIZ ACTIVIDADES DEPORTIVAS");
+
+									});
+
+				            		
 
 				            		/*================================================================
 				            		=            Añadir valores a modal y construir tabla            =
@@ -1943,7 +2005,7 @@ var segmentosJsAjax=function(parametro1,parametro2){
 
 										selectorExcel__poa__inicial($("#select__actAdm"+idActividades),$(".cargarExcel__actAdm"),$(".cargaManual__actAdm"));
 
-										construccion__modal__excel($("#enlaceMatriz__excel"+idActividades),["Item","Tipo de contratación","Nombre Ítem","Nombre infraestructura","Provincia","Dirección","Estado","Tipo recursos","Tipo inversión","Detalle inversión","Tipo Mantenimiento","Materiales servicios <br> a <br> requerir para el <br> mantenimiento","Fecha último <br> mantenimiento <br> realizado","Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre","Total"],"mantenimiento","documentos/POAINICIAL_MATRICES/MATRIZ_ACTIVIDAD_002.xlsx");
+										construccion__modal__excel($("#enlaceMatriz__excel"+idActividades),["Código Ítem","Nombre infraestructura","Provincia","Dirección","Estado","Tipo recursos","Tipo inversión","Detalle inversión","Tipo Mantenimiento","Materiales servicios <br> a <br> requerir para el <br> mantenimiento","Fecha último <br> mantenimiento <br> realizado"],"mantenimiento","documentos/POAINICIAL_MATRICES/MATRIZ_ACTIVIDAD_002.xlsx",true,["Item__array","nombreInfra__array","provincia__array","direccion__array","estado__array","tipoRecursos__array","tipoIntervencion__array","detallarTipo__intervencion__array","tipoMantenimiento__array","materiales__servicios__array","ultimoFecha__servicios__array"],3,"MATRIZ MANTENIMIENTO");
 
 									});
 
